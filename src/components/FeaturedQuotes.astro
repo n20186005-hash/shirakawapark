@@ -1,0 +1,25 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const reviews = messages.reviews;
+const featured = reviews.featured ?? [];
+---
+
+{featured.length > 0 && (
+  <section class="section-padding" style="background: var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{reviews.featuredTitle}</h2>
+        <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{reviews.featuredSubtitle}</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {featured.map((item) => (
+          <blockquote class="rounded-2xl p-6 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+            <p class="text-lg leading-relaxed mb-5" style="color: var(--text-primary);">“{item.text}”</p>
+            <footer class="text-sm" style="color: var(--text-secondary);">{item.source}</footer>
+          </blockquote>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

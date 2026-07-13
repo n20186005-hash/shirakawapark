@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "title": "Shirakawa Park | Nagoya, Aichi, Japan",
+    "description": "The complete guide to Shirakawa Park in Nagoya: home of the Nagoya City Science Museum and Art Museum, seasonal cherry blossoms, visitor reviews and how to get there."
+  },
+  "header": {
+    "siteName": "Shirakawa Park",
+    "home": "Home",
+    "visit": "Visit",
+    "transport": "Getting Here",
+    "history": "About",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "map": "Map",
+    "backToHome": "Back to Home"
+  },
+  "common": {
+    "changeLanguage": "Switch language",
+    "toggleTheme": "Toggle theme"
+  },
+  "hero": {
+    "title": "Shirakawa Park",
+    "subtitle": "A green oasis in the heart of Nagoya's Sakae district — home to the Nagoya City Science Museum and Art Museum, with cherry blossoms in spring and open lawns all year round.",
+    "rating": "4.0 (7,032)",
+    "reviewCount": "7,032 reviews",
+    "hours": "Open 24 hours",
+    "openMaps": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8",
+    "tags": ["Open 24 hours", "Free entry", "Sakae, Nagoya"],
+    "routeCta": {
+      "label": "Plan Your Route",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "About the Park",
+      "href": "#history"
+    }
+  },
+  "intro": {
+    "title": "Discover Shirakawa Park",
+    "description": "Shirakawa Park is one of central Nagoya's most beloved green spaces, lying in the Sakae district of Naka Ward between the Nagoya City Science Museum and the Nagoya City Art Museum. Opened in 1931, it is a classic urban park of lawns, tree-lined paths and seasonal flower beds. Every spring roughly 120 cherry trees turn the grounds pink, while in autumn the ginkgo and maple leaves colour the avenues. With no admission fee and 24-hour access, it is a calm retreat for locals, families and visitors exploring the museums that flank it.",
+    "visitGuide": {
+      "title": "Visitor Guide",
+      "eyebrow": "Practical Planning",
+      "description": "As a public park open 24 hours, Shirakawa Park can be visited at any time; early morning and weekday afternoons are the quietest.",
+      "items": [
+        "Plan 30 minutes to an hour: stroll the lawns, photograph the cherry blossoms (late March–early April) or the autumn leaves.",
+        "The park sits between the Nagoya City Science Museum (north) and the Nagoya City Art Museum (south) — combine all three in one visit.",
+        "Paths are flat and paved, but shade is limited in summer: bring water, a hat and sunscreen.",
+        "It is a short walk from Sakae and Fushimi, the two main hubs of central Nagoya."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "Opened in 1931 as a classic Showa-era urban park",
+        "Home to the Nagoya City Science Museum and Art Museum",
+        "Around 120 cherry trees — a famous Sakae hanami spot",
+        "Open 24 hours, free admission, in central Nagoya"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "How to Reach Shirakawa Park",
+    "subtitle": "Nagoya is a major rail hub, so the main decisions are how to reach the city and which subway line to take to Fushimi or Sakae.",
+    "overviewTitle": "Start with your arrival point",
+    "overviewText": "Nagoya is reached by the Tokaido Shinkansen, by air via Chubu Centrair International Airport (NGO), or by highway bus and car. Once in the city, Shirakawa Park lies in Naka Ward near Sakae; the nearest subway stations are Fushimi (Higashiyama & Tsurumai lines) and Sakae (Higashiyama & Meijo lines), each a 5–10 minute walk.",
+    "arrivalTitle": "Know this before you set out",
+    "arrivalItems": [
+      "The park is in central Nagoya, Naka Ward, 2-17 Sakae — flat and easy to reach on foot from Sakae or Fushimi.",
+      "Chubu Centrair Airport (NGO) is about 35 km south; Nagoya Station is the Shinkansen gateway, roughly 3 km west.",
+      "In spring (cherry season) and at weekends the Sakae area is busy: allow extra time for the subway and on-site navigation."
+    ],
+    "modes": [
+      {
+        "label": "Arrival by plane",
+        "icon": "✈️",
+        "title": "Fly to Chubu Centrair International Airport (NGO)",
+        "description": "For those coming from overseas or distant cities, flying into Nagoya is the most convenient option.",
+        "details": [
+          "Chubu Centrair (NGO) is about 35 km south of central Nagoya, on an artificial island in Ise Bay.",
+          "The Meitetsu μ-SKY limited express reaches Nagoya Station in about 28–35 minutes; trains to the airport are also direct.",
+          "From Nagoya Station, take the Higashiyama Subway Line one stop to Fushimi, then walk about 7 minutes to the park."
+        ]
+      },
+      {
+        "label": "By train / Shinkansen",
+        "icon": "🚄",
+        "title": "Tokaido Shinkansen to Nagoya Station",
+        "description": "The Shinkansen is the fastest way to reach Nagoya from Tokyo, Kyoto and Osaka.",
+        "details": [
+          "The Tokaido Shinkansen connects Tokyo, Kyoto and Osaka with Nagoya Station in about 1h40, 35 min and 50 min respectively.",
+          "From Nagoya Station, the Higashiyama Subway Line goes one stop to Fushimi (or two to Sakae).",
+          "The park is a 5–10 minute walk from either Fushimi or Sakae subway exits."
+        ]
+      },
+      {
+        "label": "Public transit",
+        "icon": "🚇",
+        "title": "Subway & City Bus",
+        "description": "Nagoya's subway is the easiest way to reach the park from anywhere in the city.",
+        "details": [
+          "Take the Higashiyama Line to Fushimi or Sakae, or the Tsurumai Line to Fushimi.",
+          "From Fushimi Station it is about a 7-minute walk; from Sakae about a 10-minute walk south-west.",
+          "City buses also stop near Sakae; the park is clearly signed from the Sakae and Fushimi areas."
+        ]
+      },
+      {
+        "label": "Taxi, walking & cycling",
+        "icon": "🚕",
+        "title": "Taxi, Walking & Cycling",
+        "description": "For the last stretch, central Nagoya is flat, walkable and bike-friendly.",
+        "details": [
+          "A taxi from Nagoya Station takes about 10 minutes (roughly 3 km); useful with luggage or in bad weather.",
+          "From Sakae or the Science Museum the park is just a few minutes on foot or by rental bike.",
+          "The park paths are flat and step-free, ideal for wheelchairs, strollers and a relaxed walk."
+        ]
+      }
+    ],
+    "localTipsTitle": "Tips for your visit",
+    "localTips": [
+      "Cherry blossom season (late March–early April) is the busiest; visit early morning for photos and fewer crowds.",
+      "The park is open 24 hours and free, so you can also enjoy it lit up at night or for a quiet evening walk.",
+      "Pair your visit with the adjacent Science Museum and Art Museum; both are paid but steps from the lawns."
+    ],
+    "mapsCta": "View Map & Route",
+    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8"
+  },
+  "officialManagement": {
+    "title": "About the Park",
+    "text": "Shirakawa Park is a metropolitan park managed under the City of Nagoya's parks system, located in Naka Ward at the heart of the Sakae district. Together with the Nagoya City Science Museum and the Nagoya City Art Museum, which sit within its grounds, it forms a major cultural and green space for the city. Maintained as a public, free-access park, it serves residents and visitors alike as a place for relaxation, seasonal flower viewing and community events."
+  },
+  "knowledge": {
+    "title": "History & Character of Shirakawa Park",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Origins (1931)",
+        "content": "Shirakawa Park opened in 1931 (Showa 6), during a period when Nagoya was modernising its urban centre. It was laid out as a Western-style public park of open lawns and tree-lined promenades, reflecting the city's ambition to create green, recreational spaces for its citizens. The park takes its name from the Shirakawa (White River), a small stream that once flowed through this part of Nagoya before being culverted underground as the city expanded."
+      },
+      {
+        "id": "meaning",
+        "title": "Why Here?",
+        "content": "The site was chosen in the Sakae district because it sat between the city's growing cultural institutions and its commercial heart. Over time the park became the green front garden of two landmark museums: the Nagoya City Science Museum to the north and the Nagoya City Art Museum to the south. Its central, flat location made it an ideal gathering place and a calm counterpoint to the busy Sakae shopping district nearby."
+      },
+      {
+        "id": "legend",
+        "title": "Cherry Blossoms & the Seasons",
+        "content": "Today the park is best known for its roughly 120 cherry trees, which draw crowds for hanami (blossom viewing) each spring. Beyond cherry season, the lawns, ginkgo avenues and water features make it a year-round retreat. The open, level grounds also host community events and markets, keeping the park woven into the daily life of Nagoya."
+      },
+      {
+        "id": "significance",
+        "title": "A Green Heart of Nagoya",
+        "content": "Shirakawa Park remains one of central Nagoya's most accessible green spaces, free and open around the clock. Together with the museums on its grounds it forms a compact cultural quarter — a place where science, art and nature meet just steps from the Sakae skyline."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Explore Shirakawa Park through its lawns, cherry blossoms, museums and seasonal scenery.",
+    "photoAlt": "Shirakawa Park, Nagoya",
+    "photoAlts": [
+      "Wide view of Shirakawa Park's open lawns and tree-lined paths",
+      "Cherry blossoms in full bloom along the park's central avenue",
+      "The Nagoya City Science Museum buildings at the north end of the park",
+      "Nagoya City Art Museum framed by greenery at the south end",
+      "Seasonal flower beds and benches under the trees",
+      "The park's water feature and fountains on a clear day",
+      "Autumn ginkgo and maple leaves colouring the paths",
+      "Families and visitors relaxing on the grass",
+      "Cherry trees reflected in the park's ponds",
+      "Evening light over the lawns and museum façades",
+      "A quiet path lined with cherry trees",
+      "Public rest area and open plaza within the park",
+      "Spring hanami crowds enjoying the blossoms",
+      "The modernist architecture of the Science Museum dome",
+      "Art Museum sculpture and exterior detail",
+      "Children playing on the open green space",
+      "Fountain spray against the Nagoya skyline",
+      "Benches and lanterns along the promenade",
+      "Dawn over the empty, calm park",
+      "Close-up of cherry petals on the grass",
+      "The park gate and signage at Sakae",
+      "Cyclists and walkers on the flat paths",
+      "Seasonal illuminations in the evening",
+      "Wide panorama of Shirakawa Park and surrounding city"
+    ],
+    "viewAll": "View Location on Google Maps",
+    "showMore": "Show More Photos",
+    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Visitor feedback is available on Google Maps (external link).",
+    "featuredTitle": "Selected Impressions",
+    "featuredSubtitle": "Two short visitor quotes break up the long read and reinforce the park's mix of nature and culture.",
+    "moreReviews": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8",
+    "featured": [
+      {
+        "text": "A calm green escape right in Sakae. Perfect for a walk between the Science Museum and the Art Museum, especially during cherry blossom season.",
+        "source": "Kenji T., April 2026"
+      },
+      {
+        "text": "We visited in the evening after the museums closed. Quiet, safe and beautifully lit — a lovely spot to unwind in the city centre.",
+        "source": "Aiko M., March 2026"
+      }
+    ],
+    "items": [
+      {
+        "name": "Kenji T.",
+        "date": "April 2026",
+        "rating": 5,
+        "text": "A calm green escape right in Sakae. Perfect for a walk between the Science Museum and the Art Museum, especially during cherry blossom season. Free and open all hours."
+      },
+      {
+        "name": "Aiko M.",
+        "date": "March 2026",
+        "rating": 5,
+        "text": "We visited in the evening after the museums closed. Quiet, safe and beautifully lit — a lovely spot to unwind in the city centre."
+      },
+      {
+        "name": "Hiroshi K.",
+        "date": "February 2026",
+        "rating": 4,
+        "text": "A handy, flat park to rest between sights. Not huge, but the museums on either side make it worth the stop. Bring a hat in summer as shade is limited."
+      },
+      {
+        "name": "Yuki S.",
+        "date": "January 2026",
+        "rating": 4,
+        "text": "Great location next to Fushimi and Sakae. Easy to reach by subway and pleasant for a morning stroll before the crowds arrive."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "How to Get Here",
+    "subtitle": "2 Chome-17 Sakae, Naka Ward, Nagoya, Aichi 460-0008, Japan",
+    "openMaps": "Open in Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8"
+  },
+  "footer": {
+    "siteName": "Shirakawa Park",
+    "rights": "© 2026 Shirakawa Park — Independent non-profit visitor guide. All rights reserved.",
+    "legalLinksTitle": "Privacy & Terms",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Official & Reference Resources",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8",
+    "officialLinksList": [
+      { "name": "Nagoya City Science Museum", "url": "http://www.ncsm.city.nagoya.jp/" },
+      { "name": "Nagoya City Art Museum", "url": "https://art-museum.city.nagoya.jp/" },
+      { "name": "City of Nagoya", "url": "https://www.city.nagoya.jp/" },
+      { "name": "Nagoya Convention & Visitors Bureau", "url": "https://www.nagoya-info.jp/" },
+      { "name": "Aichi Prefectural Tourism Association", "url": "https://www.aichi-now.jp/" }
+    ],
+    "disclaimer": "This is an independent, non-profit visitor information project. We are not affiliated with any government body or official institution."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Information Collection",
+        "content": "We generally do not actively collect personally identifiable information from users. Any information provided by you through contact forms or emails will be kept strictly confidential."
+      },
+      {
+        "heading": "2. Use of Information",
+        "content": "The information we collect is used solely to provide, maintain, and improve our services, and to communicate with you. We do not sell or share your personal information with third parties for marketing purposes."
+      },
+      {
+        "heading": "3. Cookies and Tracking",
+        "content": "We use cookies and similar tracking technologies to track the activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent."
+      },
+      {
+        "heading": "4. Data Security",
+        "content": "The security of your data is important to us. We use commercially acceptable means to protect your Personal Data, though no method of transmission over the Internet is 100% secure."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "content": "By accessing and using this website, you agree to be bound by these terms of service. If you disagree with any part of the terms, you may not access the service."
+      },
+      {
+        "heading": "2. Use of Service",
+        "content": "This website is an independent, non-profit visitor information project. The information provided is for general informational purposes only. You agree to use the site responsibly and lawfully."
+      },
+      {
+        "heading": "3. Intellectual Property",
+        "content": "All content on this website, including texts, images, and logos, is the property of the website owner unless otherwise stated. Unauthorized use, reproduction, or distribution is strictly prohibited."
+      },
+      {
+        "heading": "4. Limitation of Liability",
+        "content": "We shall not be held liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this website or the information contained herein."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Manage your cookie preferences.",
+    "essential": {
+      "title": "Strictly Necessary Cookies",
+      "description": "Required for basic website functionality.",
+      "badge": "Always active"
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us understand how visitors interact with the site."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "Used to track visitors across websites."
+    },
+    "save": "Save Preferences",
+    "saved": "Preferences saved!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical information on facilities, the park's history and planning your visit to Shirakawa Park.",
+    "amenities": {
+      "title": "Facilities nearby",
+      "items": [
+        { "icon": "🅿️", "label": "Parking", "value": "Paid lots near Sakae & Fushimi" },
+        { "icon": "🚻", "label": "Restrooms", "value": "Public restrooms in the park" },
+        { "icon": "🔌", "label": "Fuel / EV", "value": "Stations around Sakae" },
+        { "icon": "♿", "label": "Accessibility", "value": "Step-free, flat paths" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transport & Facilities",
+        "items": [
+          {
+            "q": "Is there parking nearby? How much does it cost?",
+            "a": "Shirakawa Park itself has no dedicated parking lot. Several paid municipal and private parking lots are within a 3–5 minute walk, mainly around the Sakae and Fushimi districts. Rates are typically charged by the hour; early arrival on weekends and during cherry season is recommended as they fill quickly."
+          },
+          {
+            "q": "Can wheelchairs or strollers get close?",
+            "a": "Yes. The park is completely flat with paved, step-free paths, making it easy to navigate with wheelchairs, strollers and mobility aids. The adjacent museum entrances are also accessible."
+          },
+          {
+            "q": "Are there restrooms or food nearby?",
+            "a": "Public restrooms are available within the park. For food and drinks, the surrounding Sakae district is full of cafés, restaurants and convenience stores a few minutes' walk away; the museums also have cafés."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "History & Nature",
+        "items": [
+          {
+            "q": "When was the park founded and why is it special?",
+            "a": "Shirakawa Park opened in 1931 as a Western-style public park, named after the Shirakawa river that once flowed nearby. It is special because it cradles two major museums — the Nagoya City Science Museum and the Nagoya City Art Museum — and is famous for about 120 cherry trees that turn the grounds pink each spring."
+          },
+          {
+            "q": "What is the Shirakawa river connection?",
+            "a": "The park is named after the Shirakawa (White River), a small stream that originally ran through this area of Nagoya. As the city modernised, the river was culverted underground, but its name lives on in the park that became the neighbourhood's green heart."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & Tickets",
+        "items": [
+          {
+            "q": "Is there an entrance fee?",
+            "a": "No. Shirakawa Park is a public park with free, 24-hour access — no ticket office or gate. (The museums on the grounds charge separate admission.)"
+          },
+          {
+            "q": "How long does a visit take?",
+            "a": "A relaxed visit lasts about 30 minutes to an hour: a stroll around the lawns, photos of the cherry blossoms or autumn leaves, and perhaps a rest on a bench. Allow extra time if you also enter the Science Museum or Art Museum."
+          },
+          {
+            "q": "Can I go in bad weather?",
+            "a": "Yes — the park is open 24 hours and is outdoor, so it can be visited in any weather. In summer the sun is strong and shade is limited, so bring water and sun protection; after rain the paths may be damp but remain walkable."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "What to see nearby",
+        "items": [
+          {
+            "q": "After visiting, what else do you recommend nearby?",
+            "a": "Right beside the park are the Nagoya City Science Museum (north) and the Nagoya City Art Museum (south). A short walk reaches Sakae's shopping and nightlife, Nagoya TV Tower and Hisaya-odori Park, while Nagoya Castle and the Osu shopping arcade are a little further by subway."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Discover More in Nagoya",
+    "attractionsTitle": "Nearby Attractions",
+    "toursTitle": "Recommended Experiences",
+    "attractions": [
+      { "name": "Nagoya City Science Museum", "url": "http://www.ncsm.city.nagoya.jp/" },
+      { "name": "Nagoya City Art Museum", "url": "https://art-museum.city.nagoya.jp/" },
+      { "name": "Sakae & Nagoya TV Tower", "url": "https://www.nagoya-info.jp/" },
+      { "name": "Hisaya-odori Park", "url": "https://www.city.nagoya.jp/" },
+      { "name": "Nagoya Castle", "url": "https://www.nagoya-info.jp/" }
+    ],
+    "tours": [
+      { "name": "Science Museum & planetarium visit", "url": "http://www.ncsm.city.nagoya.jp/" },
+      { "name": "Art Museum collection tour", "url": "https://art-museum.city.nagoya.jp/" },
+      { "name": "Sakae walking & shopping stroll", "url": "https://www.aichi-now.jp/" }
+    ]
+  }
+}
