@@ -4,7 +4,7 @@ const { messages } = getI18n(Astro.url);
 const g = messages.gallery;
 const totalImages = 24;
 const images = Array.from({ length: totalImages }, (_, i) => {
-  const n = String(i + 1).padStart(2, '0');
+  const n = String(i + 1);
   return `/gallery/shirakawapark-${n}.jpg`;
 });
 const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);

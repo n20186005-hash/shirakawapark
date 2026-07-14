@@ -21,7 +21,7 @@
   },
   "hero": {
     "title": "Shirakawa Park",
-    "subtitle": "A green oasis in the heart of Nagoya's Sakae district — home to the Nagoya City Science Museum and Art Museum, with cherry blossoms in spring and open lawns all year round.",
+    "subtitle": "Where art, science and greenery intertwine — a cultural gravity point in central Nagoya. A 'green lung' reborn after the war, crowned to the north by the world's largest planetarium dome and embraced to the south by a temple of art. Cherry blossoms in spring, golden ginkgo in autumn, open 24 hours — a hidden natural sanctuary beside the bustling Sakae district.",
     "rating": "4.0 (7,032)",
     "reviewCount": "7,032 reviews",
     "hours": "Open 24 hours",
@@ -63,58 +63,44 @@
   },
   "transportSection": {
     "title": "How to Reach Shirakawa Park",
-    "subtitle": "Nagoya is a major rail hub, so the main decisions are how to reach the city and which subway line to take to Fushimi or Sakae.",
-    "overviewTitle": "Start with your arrival point",
-    "overviewText": "Nagoya is reached by the Tokaido Shinkansen, by air via Chubu Centrair International Airport (NGO), or by highway bus and car. Once in the city, Shirakawa Park lies in Naka Ward near Sakae; the nearest subway stations are Fushimi (Higashiyama & Tsurumai lines) and Sakae (Higashiyama & Meijo lines), each a 5–10 minute walk.",
+    "subtitle": "We'll breeze through long-distance travel and focus on the 'last mile': the park is an easy walk from the nearest subway stations.",
+    "overviewTitle": "Once you're in Nagoya",
+    "overviewText": "Nagoya is reached by the Tokaido Shinkansen, by air via Chubu Centrair International Airport (NGO), or by highway bus. Once in the city, Shirakawa Park lies in Naka Ward near Sakae; the nearest subway stations are Fushimi and Sakae, each only a 5–10 minute walk away.",
     "arrivalTitle": "Know this before you set out",
     "arrivalItems": [
       "The park is in central Nagoya, Naka Ward, 2-17 Sakae — flat and easy to reach on foot from Sakae or Fushimi.",
-      "Chubu Centrair Airport (NGO) is about 35 km south; Nagoya Station is the Shinkansen gateway, roughly 3 km west.",
-      "In spring (cherry season) and at weekends the Sakae area is busy: allow extra time for the subway and on-site navigation."
+      "The park has no dedicated parking; use the municipal underground car parks nearby.",
+      "Cherry season and weekends get crowded; go early in the morning to beat the crowds."
     ],
     "modes": [
       {
-        "label": "Arrival by plane",
-        "icon": "✈️",
-        "title": "Fly to Chubu Centrair International Airport (NGO)",
-        "description": "For those coming from overseas or distant cities, flying into Nagoya is the most convenient option.",
-        "details": [
-          "Chubu Centrair (NGO) is about 35 km south of central Nagoya, on an artificial island in Ise Bay.",
-          "The Meitetsu μ-SKY limited express reaches Nagoya Station in about 28–35 minutes; trains to the airport are also direct.",
-          "From Nagoya Station, take the Higashiyama Subway Line one stop to Fushimi, then walk about 7 minutes to the park."
-        ]
-      },
-      {
-        "label": "By train / Shinkansen",
-        "icon": "🚄",
-        "title": "Tokaido Shinkansen to Nagoya Station",
-        "description": "The Shinkansen is the fastest way to reach Nagoya from Tokyo, Kyoto and Osaka.",
-        "details": [
-          "The Tokaido Shinkansen connects Tokyo, Kyoto and Osaka with Nagoya Station in about 1h40, 35 min and 50 min respectively.",
-          "From Nagoya Station, the Higashiyama Subway Line goes one stop to Fushimi (or two to Sakae).",
-          "The park is a 5–10 minute walk from either Fushimi or Sakae subway exits."
-        ]
-      },
-      {
-        "label": "Public transit",
+        "label": "Subway (recommended)",
         "icon": "🚇",
-        "title": "Subway & City Bus",
-        "description": "Nagoya's subway is the easiest way to reach the park from anywhere in the city.",
+        "title": "Higashiyama / Tsurumai Line · Fushimi Stn",
+        "description": "The most convenient way to the park.",
         "details": [
-          "Take the Higashiyama Line to Fushimi or Sakae, or the Tsurumai Line to Fushimi.",
-          "From Fushimi Station it is about a 7-minute walk; from Sakae about a 10-minute walk south-west.",
-          "City buses also stop near Sakae; the park is clearly signed from the Sakae and Fushimi areas."
+          "Take the Higashiyama or Tsurumai Line to Fushimi, then exit from Gate 5 and head south.",
+          "About a 5-minute walk to the park."
         ]
       },
       {
-        "label": "Taxi, walking & cycling",
-        "icon": "🚕",
-        "title": "Taxi, Walking & Cycling",
-        "description": "For the last stretch, central Nagoya is flat, walkable and bike-friendly.",
+        "label": "Subway (via Sakae)",
+        "icon": "🚇",
+        "title": "Higashiyama / Meijo Line · Sakae Stn",
+        "description": "A good choice if you want to shop too.",
         "details": [
-          "A taxi from Nagoya Station takes about 10 minutes (roughly 3 km); useful with luggage or in bad weather.",
-          "From Sakae or the Science Museum the park is just a few minutes on foot or by rental bike.",
-          "The park paths are flat and step-free, ideal for wheelchairs, strollers and a relaxed walk."
+          "Take the Higashiyama or Meijo Line to Sakae, then stroll south-west.",
+          "About a 10-minute walk to the park."
+        ]
+      },
+      {
+        "label": "Car / Taxi",
+        "icon": "🚕",
+        "title": "Navigate to 'Shirakawa Park'",
+        "description": "Handy with luggage or in bad weather.",
+        "details": [
+          "Set your navigation to 'Shirakawa Park' and use the municipal underground car parks nearby (no on-site parking).",
+          "About a 10-minute drive from Nagoya Station."
         ]
       }
     ],
@@ -153,8 +139,27 @@
         "id": "significance",
         "title": "A Green Heart of Nagoya",
         "content": "Shirakawa Park remains one of central Nagoya's most accessible green spaces, free and open around the clock. Together with the museums on its grounds it forms a compact cultural quarter — a place where science, art and nature meet just steps from the Sakae skyline."
+      },
+      {
+        "id": "war",
+        "title": "A 'Green Lung' Reborn After the War",
+        "content": "Shirakawa Park suffered heavy air-raid damage during World War II. In the post-war years it was designated one of the two core green spaces of Nagoya's war-damage reconstruction plan (the other being Hisaya-odori Park). More than a place to relax, it became a green symbol of the city's rebirth from the ruins — entrusted with regulating the urban microclimate and healing citizens' spirits."
+      },
+      {
+        "id": "river",
+        "title": "The Vanished Shirakawa & Its Underground Culvert",
+        "content": "The park takes its name from the Shirakawa (White River) that once flowed here. To make room for the modern city, the stream was converted into a complex underground culvert. As you stroll the lawns, the clear water of old still flows quietly beneath your feet — a wonderful urban-geography teaching point."
+      },
+      {
+        "id": "planetarium",
+        "title": "The World's Largest Planetarium",
+        "content": "Floating on the park's north side is the giant sphere of the Nagoya City Science Museum — the 'Brother Earth' planetarium. With a 35-metre inner diameter, it is certified by Guinness World Records as the 'world's largest planetarium', its shell of titanium panels radiating a futuristic, sci-fi feel."
       }
-    ]
+    ],
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "The giant metal sphere suspended between the museum buildings is Guinness-certified as the 'world's largest planetarium' (35 m inner diameter). Without leaving the park, you can frame a photo with a world-class scientific landmark."
+    }
   },
   "gallery": {
     "title": "Photo Gallery",
@@ -193,18 +198,22 @@
   "reviews": {
     "title": "Visitor Reviews",
     "declaration": "Visitor feedback is available on Google Maps (external link).",
-    "featuredTitle": "Selected Impressions",
-    "featuredSubtitle": "Two short visitor quotes break up the long read and reinforce the park's mix of nature and culture.",
+    "featuredTitle": "Visitor Quotes",
+    "featuredSubtitle": "A few short lines that capture the spirit of Shirakawa Park.",
     "moreReviews": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8",
     "featured": [
       {
-        "text": "A calm green escape right in Sakae. Perfect for a walk between the Science Museum and the Art Museum, especially during cherry blossom season.",
-        "source": "Kenji T., April 2026"
+        "text": "Beyond the bustle of Sakae, this is a patch of green where time slows down.",
+        "source": "Regular visitor · Nagoya"
       },
       {
-        "text": "We visited in the evening after the museums closed. Quiet, safe and beautifully lit — a lovely spot to unwind in the city centre.",
-        "source": "Aiko M., March 2026"
+        "text": "Kids chase the rocket while adults gaze at the planetarium — science has never felt so close.",
+        "source": "Family travellers · Osaka"
+      },
+      {
+        "text": "Cherry blossoms, a titanium sphere and Kisho Kurokawa's geometry — all in one park.",
+        "source": "Architecture student · Kyoto"
       }
     ],
     "items": [
@@ -412,6 +421,136 @@
       { "name": "Science Museum & planetarium visit", "url": "http://www.ncsm.city.nagoya.jp/" },
       { "name": "Art Museum collection tour", "url": "https://art-museum.city.nagoya.jp/" },
       { "name": "Sakae walking & shopping stroll", "url": "https://www.aichi-now.jp/" }
+    ]
+  },
+  "scienceArt": {
+    "title": "The Park's Core Institutions: Where Science Meets Art",
+    "subtitle": "Shirakawa Park is more than greenery — it is a cultural and intellectual hub of Nagoya. Two internationally renowned museums sit on its flanks, blending with the natural setting.",
+    "scienceMuseum": {
+      "name": "Nagoya City Science Museum",
+      "role": "Comprehensive modern science centre & interactive education",
+      "highlight": "The giant sphere suspended between its buildings — the 'Brother Earth' planetarium — has a 35 m inner diameter and is Guinness-certified as the 'world's largest planetarium'; its titanium-panel shell radiates a futuristic, sci-fi feel.",
+      "points": [
+        "Four core zones — Life Sciences, Science & Engineering and the Astronomical Theatre — covering science from the microscopic cell to the macroscopic universe.",
+        "Four signature experiences: an earthquake simulator reproducing magnitude 9, a 9 m 'Tornado Lab', a -30°C 'Deep Freeze Lab', and an 11 m high electrical-discharge stage.",
+        "Immersive demonstrations turn dry formulae into vivid visual spectacle."
+      ],
+      "ctaLabel": "Visit the Science Museum site ↗",
+      "ctaUrl": "http://www.ncsm.city.nagoya.jp/"
+    },
+    "artMuseum": {
+      "name": "Nagoya City Art Museum",
+      "role": "Modern-art showcase & architectural landmark",
+      "highlight": "The building was designed by Kisho Kurokawa, a grand master of Japanese contemporary architecture and a leading figure of the Metabolist movement, blending Western geometric aesthetics with traditional Edo imagery.",
+      "points": [
+        "Four pillars of the permanent collection: local 'folk art' represented by Minori Kitagawa, the early-20th-century 'Mexican Renaissance', influential 'Surrealism', and 'contemporary cutting-edge art'.",
+        "A sunken courtyard flows naturally into the park's green slopes, breaking the museum's enclosed feel and letting art step into public leisure.",
+        "Modernist sculptures placed on the lawns turn the park into a 'museum without walls'."
+      ],
+      "ctaLabel": "Visit the Art Museum site ↗",
+      "ctaUrl": "https://art-museum.city.nagoya.jp/"
+    }
+  },
+  "outdoorMuseum": {
+    "title": "An Open-Air Science Micro-Museum: The Park's 'Hardcore' Landmarks",
+    "subtitle": "Walking the lawns and tree-lined paths, you'll find giant machines and sculptures — national treasures of Japan's industry, space, polar and marine exploration.",
+    "items": [
+      {
+        "id": "rocket",
+        "icon": "🚀",
+        "name": "H-II Rocket Full-Scale Model",
+        "location": "Outdoor plaza north of the Science Museum",
+        "background": "A 1:1 replica of Japan's H-II large launch vehicle (nearly 50 m tall). The H-II, developed in the 1990s, was Japan's core liquid-fuel rocket and marked its full mastery of independent launch capability.",
+        "points": [
+          "Examine up close the airframe, the huge first-stage engine nozzle and the solid rocket boosters (SRB) on either side.",
+          "Its soaring presence illustrates the principles of multi-stage propulsion and the sheer scale of space engineering."
+        ],
+        "badge": { "value": "1:1", "label": "Full-scale replica" }
+      },
+      {
+        "id": "snow",
+        "icon": "🧊",
+        "name": "Antarctic Overwintering Vehicle",
+        "location": "Outdoor science display area",
+        "background": "This orange tracked vehicle is the actual 'SM50S' Antarctic overwintering vehicle used by the Japanese Antarctic Research Expedition (JARE) on the polar plateau in extreme cold, low pressure and blizzards.",
+        "points": [
+          "Built with low-temperature steel, wide tracks and a heavily insulated cabin to operate at -60°C.",
+          "It carried scientists across hundreds of kilometres of uninhabited ice — hard evidence of humanity studying the planet's limits and global climate."
+        ],
+        "badge": { "value": "-60℃", "label": "Polar-rated design" }
+      },
+      {
+        "id": "train",
+        "icon": "🚂",
+        "name": "Historic Rail Relics (Train Sculptures)",
+        "location": "Tree-lined path on the park's east side",
+        "background": "The park preserves and displays classic trains marking Nagoya's industrial beginnings: a B6 steam locomotive and a retired Nagoya City Tram Type 1400.",
+        "points": [
+          "B6 steam locomotive: a main freight engine imported from Britain in the Meiji era and later built domestically, showing the linkage aesthetics of early steam (external-combustion) power.",
+          "Type 1400 tram: the backbone of pre-war Nagoya's public transit, a living textbook on modern urban planning and electrified transport."
+        ],
+        "badge": { "value": "B6", "label": "Meiji steam loco" }
+      },
+      {
+        "id": "ocean",
+        "icon": "🌊",
+        "name": "Marine-Research Machine Sculptures",
+        "location": "Around the central fountain & water features",
+        "background": "A sculpture group distilled or adapted from retired core components (metal propellers, anchor chains, deep-sea robot arms) of large deep-sea vessels and research ships such as the 'Chikyu' and 'Shinkai 6500'.",
+        "points": [
+          "Their sharp streamlined hydrodynamic forms teach fluid dynamics and modern shipbuilding.",
+          "The cold machinery set against the lively fountain water creates a unique industrial landscape."
+        ],
+        "badge": { "value": "6500m", "label": "Deep-sea depth" }
+      }
+    ]
+  },
+  "education": {
+    "title": "Why Talk About Science & Art in a Park? (The Meaning of Public Science)",
+    "subtitle": "Shirakawa Park is no ordinary green space — it is Nagoya's ultimate laboratory for 'urban revival' and 'public education'.",
+    "points": [
+      {
+        "title": "Breaking the academic wall: 'effortless' science",
+        "text": "Museums often feel exclusive, yet Shirakawa Park places national engineering relics like the H-II rocket and Antarctic vehicle right out on the lawns. Children touch rocket shells as they run; citizens gaze at the world's largest planetarium on a stroll — knowledge leaves the textbook and enters daily life."
+      },
+      {
+        "title": "Reshaping city memory: industry & technology in footprints",
+        "text": "From a Meiji steam locomotive to a late-20th-century launch vehicle, from the vanished Shirakawa culvert to Kurokawa's Metabolism architecture, every exhibit is a coordinate of an era — showcasing Nagoya's modern story as Japan's 'manufacturing capital' (Monozukuri)."
+      },
+      {
+        "title": "Inspiring cross-disciplinary thinking: science left, art right",
+        "text": "The Science Museum to the north stands for reason, exploration and the future; the Art Museum to the south for feeling, reflection and humanity. Shirakawa Park is the ecological buffer between them, seeding a cross-disciplinary idea — that science ends in art, and art begins in science."
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who Finds Their Resonance Here? (A Guide for Every Visitor)",
+    "subtitle": "Every visitor can find the way in that suits them best.",
+    "items": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families & Young Learners",
+        "resonance": "Immersive outdoor 'big toys' they can see and even touch, sparking curiosity about space and nature.",
+        "tip": "Start on the lawn with the H-II rocket and Antarctic vehicle, then go inside the Science Museum for the 'Tornado' and 'Deep Freeze' labs."
+      },
+      {
+        "icon": "🛰️",
+        "group": "Tech, Industry & Space Fans",
+        "resonance": "Genuine hardcore machinery — a time-spanning dialogue between cutting-edge spacecraft and old steam locomotives.",
+        "tip": "Focus on the H-II's LE-7 engine nozzle and the B6 locomotive's linkage aesthetics; allow plenty of time for close-up photos."
+      },
+      {
+        "icon": "📷",
+        "group": "Architecture, Art & Photography Lovers",
+        "resonance": "The geometric tension of Kurokawa's Metabolism architecture, the sci-fi floating sphere, and modernist sculptures scattered on the lawn.",
+        "tip": "From 3 p.m. to dusk is best: sunlight through the trees hits the sunken courtyard and titanium sphere with striking lines."
+      },
+      {
+        "icon": "🗺️",
+        "group": "Urban Historians & Deep Travellers",
+        "resonance": "Exploring the vanished Shirakawa culvert and Nagoya's post-war reconstruction planning.",
+        "tip": "Avoid weekends; on a weekday morning walk the central axis south to north to read the spatial shift from classic Western garden to modern cultural quarter."
+      }
     ]
   }
 }

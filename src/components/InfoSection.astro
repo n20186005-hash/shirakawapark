@@ -3,6 +3,7 @@ import { getI18n } from '../i18n/ui';
 const { messages } = getI18n(Astro.url);
 const t = messages.knowledge;
 const sections = t.sections;
+const dyk = t.didYouKnow;
 ---
 
 <section id="history" class="section-padding" style="background: var(--bg-primary);">
@@ -25,5 +26,15 @@ const sections = t.sections;
         </div>
       ))}
     </div>
+
+    {dyk && (
+      <div class="mt-12 rounded-2xl p-7 border flex gap-4 items-start" style="background: color-mix(in srgb, var(--accent) 10%, transparent); border-color: color-mix(in srgb, var(--accent) 30%, transparent);">
+        <span class="text-2xl" aria-hidden="true">💡</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-2" style="color: var(--accent);">{dyk.title}</h3>
+          <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{dyk.text}</p>
+        </div>
+      </div>
+    )}
   </div>
 </section>
