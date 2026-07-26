@@ -15,7 +15,7 @@ const { title, description, path = '' } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
-const canonical = alts[lang] ?? alts.zh;
+const canonical = alts[lang] ?? alts.ja;
 const { messages } = getI18n(Astro.url);
 
 const jsonLd = {
