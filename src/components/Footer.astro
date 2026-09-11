@@ -11,6 +11,16 @@ const links = f.officialLinksList;
       <div>
         <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--text-primary);" set:html={f.siteName}></h3>
         <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{f.rights}</p>
+
+        <!-- NAP：官方全称 / 地址 / 电话，与 Google 地图资料保持一致 -->
+        <div class="mt-4 pt-4 border-t" style="border-color: var(--border-color);">
+          <p class="text-xs uppercase tracking-[0.16em] mb-2" style="color: var(--text-muted);">{f.napTitle}</p>
+          <p class="text-sm font-semibold mb-1" style="color: var(--text-primary);">{f.officialName}</p>
+          <p class="text-sm leading-relaxed mb-1" style="color: var(--text-secondary);">{f.address}</p>
+          <a href={`tel:${f.telephone.replace(/[^+\d]/g, '')}`} class="text-sm hover:opacity-70" style="color: var(--text-secondary);">
+            {f.telephone}
+          </a>
+        </div>
       </div>
 
       <div>
@@ -28,6 +38,11 @@ const links = f.officialLinksList;
               {f.mapsLabel}
             </a>
           </li>
+          <li>
+            <a href={f.govtTourismUrl} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 font-medium" style="color: var(--accent);">
+              {f.govtTourismLabel} ↗
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -43,6 +58,7 @@ const links = f.officialLinksList;
 
     <div class="mt-10 pt-6 border-t text-xs" style="border-color: var(--border-color); color: var(--text-muted);">
       <p class="leading-relaxed" set:html={f.disclaimer}></p>
+      <p class="leading-relaxed mt-2">{f.imageCopyright}</p>
     </div>
   </div>
 </footer>

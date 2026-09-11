@@ -50,6 +50,21 @@ const section = messages.transportSection;
       ))}
     </div>
 
+    {section.parking && (
+      <div class="rounded-2xl p-6 md:p-8 border mt-10" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+        <h3 class="font-semibold text-xl mb-2" style="color: var(--text-primary);">🅿️ {section.parking.title}</h3>
+        <p class="text-base leading-relaxed mb-5" style="color: var(--text-secondary);">{section.parking.summary}</p>
+        <ul class="grid md:grid-cols-2 gap-3 text-sm" style="color: var(--text-secondary);">
+          {section.parking.items.map((item) => (
+            <li class="flex gap-3"><span style="color: var(--accent);">•</span><span>{item}</span></li>
+          ))}
+        </ul>
+        {section.parking.stationNote && (
+          <p class="mt-5 text-sm font-medium rounded-xl px-4 py-3" style="background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--text-primary);">📍 {section.parking.stationNote}</p>
+        )}
+      </div>
+    )}
+
     <div class="grid lg:grid-cols-[1fr_auto] gap-6 items-center mt-10 rounded-2xl p-6 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
       <div>
         <h3 class="font-semibold text-xl mb-3" style="color: var(--text-primary);">{section.localTipsTitle}</h3>

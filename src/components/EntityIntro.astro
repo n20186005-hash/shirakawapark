@@ -1,0 +1,124 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config/attraction';
+
+const { messages } = getI18n(Astro.url);
+const e = messages.entity;
+const landmarks = e.landmarks ?? [];
+
+// 权威出站链接（当地政府 / 官方旅游局）
+const govLinks = [
+  { name: e.govNagoyaLabel, url: attraction.govTourismUrl },
+  { name: e.govCityLabel, url: attraction.govtCityUrl },
+];
+---
+
+<section id="about" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- 地理面包屑与归属层级：景点 → 城市 → 省/州 → 国家 -->
+    <nav aria-label={e.breadcrumbLabel} class="mb-8">
+      <ol
+        class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm rounded-full px-4 py-2 border w-fit max-w-full"
+        style="border-color: var(--border-color); background: var(--bg-tertiary); color: var(--text-muted);"
+      >
+        <li class="font-semibold" style="color: var(--text-primary);">{e.name}</li>
+        <li aria-hidden="true">›</li>
+        <li>{e.cityLabel}</li>
+        <li aria-hidden="true">›</li>
+        <li>{e.provinceLabel}</li>
+        <li aria-hidden="true">›</li>
+        <li>{e.countryLabel}</li>
+      </ol>
+    </nav>
+
+    <!-- H2：关于景点（全称 + 等位声明） -->
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-5" style="color: var(--text-primary);">
+      {e.h2About}
+    </h2>
+    <p class="text-lg leading-relaxed mb-14" style="color: var(--text-secondary);" set:html={e.lead} />
+
+    <!-- H2：位置与到访方式 -->
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-5" style="color: var(--text-primary);">
+      {e.h2Location}
+    </h2>
+    <p class="text-base leading-relaxed mb-6" style="color: var(--text-secondary);">{e.locationText}</p>
+
+    <!-- NAP：名称 / 地址 / 电话，与 Google 地图资料保持一致 -->
+    <div class="grid sm:grid-cols-3 gap-4 mb-8">
+      <div class="rounded-2xl p-5 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <p class="text-xs uppercase tracking-[0.16em] mb-2" style="color: var(--text-muted);">{e.nameLabel}</p>
+        <p class="font-semibold" style="color: var(--text-primary);">{e.name}</p>
+        <p class="text-sm mt-1" style="color: var(--text-secondary);">{e.nameAlt}</p>
+      </div>
+
+      <div class="rounded-2xl p-5 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <p class="text-xs uppercase tracking-[0.16em] mb-2" style="color: var(--text-muted);">{e.addressLabel}</p>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{e.address}</p>
+        <a
+          href={attraction.mapsShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-2 text-sm font-medium hover:opacity-70"
+          style="color: var(--accent);"
+        >
+          {e.mapLabel} ↗
+        </a>
+      </div>
+
+      <div class="rounded-2xl p-5 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <p class="text-xs uppercase tracking-[0.16em] mb-2" style="color: var(--text-muted);">{e.hoursLabel}</p>
+        <p class="text-sm leading-relaxed mb-2" style="color: var(--text-secondary);">{e.hours}</p>
+        <p class="text-xs uppercase tracking-[0.16em] mb-1" style="color: var(--text-muted);">{e.phoneLabel}</p>
+        <a
+          href={`tel:${attraction.telephone.replace(/[^+\d]/g, '')}`}
+          class="text-sm hover:opacity-70"
+          style="color: var(--text-secondary);"
+        >
+          {e.phone}
+        </a>
+      </div>
+    </div>
+
+    <!-- 权威 .gov / .org 外链 -->
+    <p class="text-sm leading-relaxed mb-14" style="color: var(--text-secondary);">
+      {e.officialTourismText}
+      {govLinks.map((link, i) => (
+        <>
+          {i > 0 && <span> · </span>}
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium hover:opacity-70"
+            style="color: var(--accent);"
+          >
+            {link.name} ↗
+          </a>
+        </>
+      ))}
+    </p>
+
+    <!-- H2：周边地标与景点（周边语义集群） -->
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-5" style="color: var(--text-primary);">
+      {e.h2Landmarks}
+    </h2>
+    <p class="text-base leading-relaxed mb-6" style="color: var(--text-secondary);" set:html={e.nearbyText} />
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {landmarks.map((landmark) => (
+        <a
+          href={landmark.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block rounded-2xl p-5 border hover:shadow-md transition h-full"
+          style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+        >
+          <p class="font-semibold mb-1" style="color: var(--text-primary);">
+            {landmark.name} <span style="color: var(--accent);">↗</span>
+          </p>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{landmark.note}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

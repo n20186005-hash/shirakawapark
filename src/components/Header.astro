@@ -15,11 +15,13 @@ const switchTo = (l: string) => (pageSeg ? `/${l}/${pageSeg}` : `/${l}`);
   <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 flex items-center justify-between gap-3 md:gap-4">
     <a href={`/${lang}`} class="font-display text-base sm:text-lg font-semibold leading-tight max-w-[11rem] sm:max-w-none" style="color: var(--text-primary);" set:html={h.siteName}></a>
 
-    <nav class="hidden md:flex items-center gap-4 text-sm lg:gap-5" style="color: var(--text-secondary);">
+    <nav class="hidden md:flex items-center gap-3 text-sm lg:gap-4" style="color: var(--text-secondary);">
       <a href={`/${lang}`} class="hover:opacity-70" set:html={h.home}></a>
       <a href={`/${lang}#visit`} class="hover:opacity-70" set:html={h.visit}></a>
+      <a href={`/${lang}#weather`} class="hover:opacity-70" set:html={h.weather}></a>
       <a href={`/${lang}#transport`} class="hover:opacity-70" set:html={h.transport}></a>
       <a href={`/${lang}#history`} class="hover:opacity-70" set:html={h.history}></a>
+      <a href={`/${lang}#facilities`} class="hover:opacity-70" set:html={h.facilities}></a>
       <a href={`/${lang}#gallery`} class="hover:opacity-70" set:html={h.gallery}></a>
       <a href={`/${lang}#reviews`} class="hover:opacity-70" set:html={h.reviews}></a>
       <a href={`/${lang}#faq`} class="hover:opacity-70" set:html={h.faq}></a>
@@ -56,8 +58,10 @@ const switchTo = (l: string) => (pageSeg ? `/${l}/${pageSeg}` : `/${l}`);
     <nav class="grid grid-cols-2 gap-2 text-sm" style="color: var(--text-secondary);">
       <a href={`/${lang}`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.home}></a>
       <a href={`/${lang}#visit`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.visit}></a>
+      <a href={`/${lang}#weather`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.weather}></a>
       <a href={`/${lang}#transport`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.transport}></a>
       <a href={`/${lang}#history`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.history}></a>
+      <a href={`/${lang}#facilities`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.facilities}></a>
       <a href={`/${lang}#gallery`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.gallery}></a>
       <a href={`/${lang}#reviews`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.reviews}></a>
       <a href={`/${lang}#faq`} class="rounded-lg px-3 py-2 border hover:opacity-80" style="border-color: var(--border-color);" set:html={h.faq}></a>

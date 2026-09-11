@@ -1,0 +1,39 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const f = messages.facilities;
+const groups = f.groups ?? [];
+---
+
+<section id="facilities" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{f.title}</h2>
+    <p class="text-center text-base sm:text-lg mb-10 max-w-3xl mx-auto leading-relaxed" style="color: var(--text-secondary);">{f.subtitle}</p>
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {groups.map((group) => (
+        <article class="rounded-2xl border p-5 flex flex-col" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="flex items-center gap-2.5 mb-3">
+            <span class="text-2xl leading-none" aria-hidden="true">{group.icon}</span>
+            <h3 class="font-display text-lg font-semibold" style="color: var(--text-primary);">{group.title}</h3>
+          </div>
+          <p class="text-sm leading-relaxed mb-3" style="color: var(--text-muted);">{group.summary}</p>
+          <ul class="space-y-2 text-sm leading-relaxed mt-auto">
+            {group.items.map((item) => (
+              <li class="flex gap-2">
+                <span class="shrink-0 mt-[0.35rem] w-1.5 h-1.5 rounded-full" style="background: var(--accent);"></span>
+                <span style="color: var(--text-secondary);" set:html={item}></span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <!-- 中立性声明：非营利科普站点，只描述设施类型，不推荐具体商户 -->
+    <div class="mt-8 rounded-2xl border p-5 sm:p-6" style="background: var(--card-bg); border-color: var(--border-color);">
+      <p class="text-sm font-semibold mb-2" style="color: var(--text-primary);">ℹ️ {f.neutralTitle}</p>
+      <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{f.neutral}</p>
+    </div>
+  </div>
+</section>

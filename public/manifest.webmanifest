@@ -1,0 +1,51 @@
+{
+  "name": "Shirakawa Park · 白川公園 Visitor Guide",
+  "short_name": "Shirakawa Park",
+  "description": "Visitor guide to Shirakawa Park (白川公園) in Sakae, Nagoya, Aichi, Japan — location map, opening hours, nearby museums and travel tips.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#faf8f4",
+  "theme_color": "#2d6375",
+  "lang": "ja",
+  "dir": "ltr",
+  "categories": ["travel", "navigation", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "地図・アクセス",
+      "short_name": "地図",
+      "description": "白川公園の地図とアクセス情報",
+      "url": "/#map",
+      "icons": [{ "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }]
+    },
+    {
+      "name": "よくある質問",
+      "short_name": "FAQ",
+      "description": "白川公園についてのよくある質問",
+      "url": "/#faq",
+      "icons": [{ "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }]
+    }
+  ]
+}

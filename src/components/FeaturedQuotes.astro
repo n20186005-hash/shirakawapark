@@ -1,9 +1,10 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { attraction } from '../config/attraction';
 const { messages } = getI18n(Astro.url);
 const reviews = messages.reviews;
 const featured = reviews.featured ?? [];
-const bg = '/gallery/shirakawapark-1.jpg';
+const bg = attraction.heroImage;
 ---
 
 {featured.length > 0 && (

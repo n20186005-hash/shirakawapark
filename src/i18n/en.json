@@ -1,14 +1,16 @@
 {
   "meta": {
-    "title": "Shirakawa Park | Nagoya, Aichi, Japan",
-    "description": "The complete guide to Shirakawa Park in Nagoya: home of the Nagoya City Science Museum and Art Museum, seasonal cherry blossoms, visitor reviews and how to get there."
+    "title": "Shirakawa Park Nagoya: Science Museum, Art Museum & Parking Guide",
+    "description": "A complete visitor guide to Shirakawa Park in Sakae, Nagoya: highlights of the Nagoya City Science Museum (world's largest planetarium) and Nagoya City Art Museum, cherry blossom season, nearby parking and typical rates, access from Fushimi Station, and 24-hour free admission."
   },
   "header": {
     "siteName": "Shirakawa Park",
     "home": "Home",
     "visit": "Visit",
+    "weather": "Weather",
     "transport": "Getting Here",
     "history": "About",
+    "facilities": "Facilities",
     "gallery": "Gallery",
     "reviews": "Reviews",
     "faq": "FAQ",
@@ -25,6 +27,9 @@
     "rating": "4.0 (7,032)",
     "reviewCount": "7,032 reviews",
     "hours": "Open 24 hours",
+    "fullNameLine": "Shirakawa Park (白川公園) — a free, 24-hour park in Sakae, Nagoya",
+    "heroImage": "/gallery/shirakawa-park-hero.jpg",
+    "imageAlt": "Shirakawa Park — main view of the park in Nagoya, Aichi, Japan",
     "openMaps": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8",
     "tags": ["Open 24 hours", "Free entry", "Sakae, Nagoya"],
@@ -111,7 +116,19 @@
       "Pair your visit with the adjacent Science Museum and Art Museum; both are paid but steps from the lawns."
     ],
     "mapsCta": "View Map & Route",
-    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8"
+    "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8",
+    "parking": {
+      "title": "Parking Guide",
+      "summary": "There is no visitor car park inside the park; use the time-based car parks nearby.",
+      "items": [
+        "Several private time-based car parks are distributed around the park (toward Sakae and Fushimi), typically billed per 30 minutes and often with a daily maximum (cap) rate.",
+        "Rates and caps vary by lot and time of day — please check the on-site price board before entering.",
+        "Weekday daytime is usually easier; weekend, public-holiday and cherry-season mornings fill up quickly.",
+        "When full, consider lots a little further away or those attached to commercial buildings and underground arcades.",
+        "Bicycles and motorbikes should use nearby bicycle/motorbike parking; riding into the park is not allowed."
+      ],
+      "stationNote": "Nearest station: about a 5-minute walk from Exit 5 of Fushimi Station (Higashiyama & Tsurumai subway lines)."
+    }
   },
   "officialManagement": {
     "title": "About the Park",
@@ -247,6 +264,7 @@
     "title": "How to Get Here",
     "subtitle": "2 Chome-17 Sakae, Naka Ward, Nagoya, Aichi 460-0008, Japan",
     "openMaps": "Open in Google Maps",
+    "officialTourism": "Official Nagoya Tourism Portal",
     "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8"
   },
   "footer": {
@@ -266,6 +284,13 @@
       { "name": "Nagoya Convention & Visitors Bureau", "url": "https://www.nagoya-info.jp/" },
       { "name": "Aichi Prefectural Tourism Association", "url": "https://www.aichi-now.jp/" }
     ],
+    "napTitle": "Location details (NAP)",
+    "officialName": "Shirakawa Park (白川公園)",
+    "address": "2 Chome-17 Sakae, Naka Ward, Nagoya, Aichi 460-0008, Japan",
+    "telephone": "+81 52-261-6641",
+    "govtTourismUrl": "https://www.nagoya-info.jp/",
+    "govtTourismLabel": "Nagoya / Aichi Official Tourism Portal",
+    "imageCopyright": "Image rights: all photographs displayed on this website remain the property and copyright of their original photographers.",
     "disclaimer": "This is an independent, non-profit visitor information project. We are not affiliated with any government body or official institution."
   },
   "privacy": {
@@ -353,6 +378,10 @@
             "a": "Shirakawa Park itself has no dedicated parking lot. Several paid municipal and private parking lots are within a 3–5 minute walk, mainly around the Sakae and Fushimi districts. Rates are typically charged by the hour; early arrival on weekends and during cherry season is recommended as they fill quickly."
           },
           {
+            "q": "How do I get to Shirakawa Park from Nagoya Station?",
+            "a": "From Nagoya Station take the Higashiyama subway line about 3 minutes (one stop) to Fushimi Station, then walk about 5 minutes from Exit 5. You can also arrive via the Sakuradori line (Fushimi Station) or the Meijo line (Sakae Station). A taxi takes roughly 10 minutes."
+          },
+          {
             "q": "Can wheelchairs or strollers get close?",
             "a": "Yes. The park is completely flat with paved, step-free paths, making it easy to navigate with wheelchairs, strollers and mobility aids. The adjacent museum entrances are also accessible."
           },
@@ -373,6 +402,10 @@
           {
             "q": "What is the Shirakawa river connection?",
             "a": "The park is named after the Shirakawa (White River), a small stream that originally ran through this area of Nagoya. As the city modernised, the river was culverted underground, but its name lives on in the park that became the neighbourhood's green heart."
+          },
+          {
+            "q": "Is it also written '白河公園'?",
+            "a": "You may see it written as 白河公園, but the official name is 白川公園 (Shirakawa Park). 川 and 河 share the same reading, so they are easily confused — both refer to the same park in Sakae, Nagoya."
           }
         ]
       },
@@ -551,6 +584,242 @@
         "resonance": "Exploring the vanished Shirakawa culvert and Nagoya's post-war reconstruction planning.",
         "tip": "Avoid weekends; on a weekday morning walk the central axis south to north to read the spatial shift from classic Western garden to modern cultural quarter."
       }
+    ]
+  },
+  "entity": {
+    "name": "Shirakawa Park",
+    "nameAlt": "白川公園 · Shirakawa Park",
+    "alternateName": ["Shirakawa Park", "Shirakawa Park Nagoya", "白川公園", "시라카와 공원"],
+    "schemaDescription": "Comprehensive visitor guide to Shirakawa Park in Nagoya, Aichi, Japan.",
+    "breadcrumbLabel": "Geographic location",
+    "cityLabel": "Nagoya",
+    "provinceLabel": "Aichi",
+    "countryLabel": "Japan",
+    "h2About": "About Shirakawa Park",
+    "h2Location": "Location & How to Visit Shirakawa Park in Nagoya",
+    "h2Landmarks": "Landmarks & Attractions Around Shirakawa Park",
+    "lead": "Welcome to <strong>Shirakawa Park</strong> (白川公園), widely recognized as the central park of Nagoya. Located in the heart of <strong>Sakae, Naka Ward, Nagoya, Aichi, Japan</strong>, this destination serves as a primary hub for travelers visiting the region — home to the Nagoya City Science Museum and the Nagoya City Art Museum.",
+    "locationText": "Shirakawa Park sits in Naka Ward at the heart of the Sakae district, a 5–10 minute walk from Fushimi Station or Sakae Station on the Nagoya subway. The park is open 24 hours a day, free of charge, with flat and step-free paved paths.",
+    "nearbyText": "When visiting <strong>Shirakawa Park</strong>, visitors can easily explore the surrounding historical landmarks and points of interest, including the <strong>Nagoya City Science Museum</strong> and the <strong>Nagoya City Art Museum</strong>, both of which sit within the park's grounds.",
+    "nameLabel": "Name",
+    "addressLabel": "Address",
+    "phoneLabel": "Telephone",
+    "hoursLabel": "Opening hours",
+    "address": "2 Chome-17 Sakae, Naka Ward, Nagoya, Aichi 460-0008, Japan",
+    "phone": "+81 52-261-6641",
+    "hours": "Open 24 hours · Free admission",
+    "mapLabel": "Open in Google Maps",
+    "landmarks": [
+      { "name": "Nagoya City Science Museum", "url": "http://www.ncsm.city.nagoya.jp/", "note": "Home of the Guinness-certified world's largest planetarium dome." },
+      { "name": "Nagoya City Art Museum", "url": "https://art-museum.city.nagoya.jp/", "note": "Modern art in a building designed by Kisho Kurokawa." },
+      { "name": "Sakae & Hisaya-odori Park", "url": "https://www.nagoya-info.jp/", "note": "Nagoya's main shopping and nightlife district, a short walk from the park." }
+    ],
+    "officialTourismText": "For official updates and regional tourism information, visit",
+    "officialTourismLabel": "Nagoya / Aichi Official Tourism Portal",
+    "govNagoyaLabel": "Nagoya Convention & Visitors Bureau",
+    "govCityLabel": "City of Nagoya (official site)"
+  },
+  "sources": {
+    "title": "Sources & References",
+    "subtitle": "This independent guide is compiled from the following official and authoritative sources. Always check the official pages for the latest opening hours and event information.",
+    "items": [
+      { "name": "Nagoya City Science Museum", "publisher": "Official site", "url": "http://www.ncsm.city.nagoya.jp/", "note": "Exhibitions, planetarium schedule and admission for the museum on the north side of the park." },
+      { "name": "Nagoya City Art Museum", "publisher": "Official site", "url": "https://art-museum.city.nagoya.jp/", "note": "Collection highlights, temporary exhibitions and access information." },
+      { "name": "City of Nagoya", "publisher": "Official municipal website", "url": "https://www.city.nagoya.jp/", "note": "Parks administration, city services and public notices." },
+      { "name": "Nagoya Convention & Visitors Bureau", "publisher": "Official tourism organisation", "url": "https://www.nagoya-info.jp/", "note": "Official Nagoya travel and sightseeing information." },
+      { "name": "Aichi Prefectural Tourism Association (Aichi Now)", "publisher": "Official tourism portal", "url": "https://www.aichi-now.jp/", "note": "Official travel guide for Aichi Prefecture." },
+      { "name": "Japan National Tourism Organization (JNTO)", "publisher": "Official national tourism organisation", "url": "https://www.japan.travel/en/", "note": "Official travel information for Japan." },
+      { "name": "Google Maps — Shirakawa Park", "publisher": "Google Maps", "url": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8", "note": "Location, photos, opening status and visitor reviews used to verify the place data." }
+    ],
+    "licenseNote": "Image rights: all photographs displayed on this website remain the property and copyright of their original photographers."
+  },
+  "weather": {
+    "title": "Current Weather & 7-Day Forecast",
+    "subtitle": "Check the sky over Sakae, Nagoya before you set out for the park.",
+    "currentLabel": "Current conditions",
+    "feelsLike": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "precipitation": "Chance of rain",
+    "forecastTitle": "7-day forecast",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "updated": "Updated",
+    "note": "Weather data refreshes automatically at regular intervals.",
+    "umbrellaTitle": "Umbrella check",
+    "clothingTitle": "What to wear",
+    "uvTitle": "UV protection",
+    "advice": {
+      "umbrella": {
+        "high": "Rain is likely. A full-size umbrella will serve you better than a folding one.",
+        "medium": "Showers are possible — a folding umbrella in your bag is worth it.",
+        "low": "Rain is unlikely. You can travel light."
+      },
+      "clothing": {
+        "hot": "Hot and humid. Bring a hat and water, and rest in the shade often.",
+        "warm": "Pleasantly warm. A light layer helps in the morning and evening.",
+        "mild": "Ideal walking weather. Comfortable shoes are all you need.",
+        "cool": "A little chilly — bring a jacket.",
+        "cold": "Cold. A thick coat and gloves will keep you comfortable."
+      },
+      "uv": {
+        "strong": "Strong sunshine is forecast. Bring sunscreen, a hat and sunglasses.",
+        "moderate": "Moderate sunshine. Protection is sensible for long stays outdoors.",
+        "low": "UV levels are low today."
+      }
+    },
+    "codes": {
+      "clear": "Clear",
+      "mainlyClear": "Mostly clear",
+      "partlyCloudy": "Partly cloudy",
+      "overcast": "Overcast",
+      "fog": "Fog",
+      "drizzle": "Drizzle",
+      "freezingDrizzle": "Freezing drizzle",
+      "rain": "Rain",
+      "freezingRain": "Freezing rain",
+      "snow": "Snow",
+      "snowGrains": "Snow grains",
+      "rainShowers": "Rain showers",
+      "snowShowers": "Snow showers",
+      "thunderstorm": "Thunderstorm",
+      "thunderstormHail": "Thunderstorm with hail"
+    }
+  },
+  "facilities": {
+    "title": "Facilities & Services In and Around the Park",
+    "subtitle": "Restrooms, parking, dining, lodging, shopping and charging — the practical details worth knowing before you visit.",
+    "neutralTitle": "About our neutrality",
+    "neutral": "This is a non-profit educational guide. We do not recommend individual businesses; we only describe the types of facilities and how they are distributed. Prices, opening hours and availability change, so please check on-site signage when you visit.",
+    "groups": [
+      {
+        "icon": "🚻",
+        "title": "Restrooms & rest",
+        "summary": "Public restrooms are located at several points in the park.",
+        "items": [
+          "Public restrooms are available at multiple locations inside the park, free of charge.",
+          "Some locations provide an accessible multi-purpose restroom suitable for wheelchair users.",
+          "For baby-changing, the indoor facilities of the adjoining cultural venues are the more reliable option.",
+          "Benches and shaded rest spots are dotted along the paths — handy for water breaks."
+        ]
+      },
+      {
+        "icon": "🅿️",
+        "title": "Parking & bicycle storage",
+        "summary": "The park has no dedicated visitor car park; nearby hourly lots are the usual choice.",
+        "items": [
+          "There is no dedicated parking area for general visitors inside the park.",
+          "Several privately operated hourly car parks are located nearby, some open 24 hours.",
+          "Lots fill up quickly at weekends, on public holidays and during events — public transport is the safer bet.",
+          "Bicycles and motorcycles should use nearby parking areas; riding inside the park is not permitted."
+        ]
+      },
+      {
+        "icon": "🍽️",
+        "title": "Dining",
+        "summary": "In-park dining is limited, but a wide range of options lies within walking distance.",
+        "items": [
+          "Vending machines are scattered around the park, though sit-down dining options are few.",
+          "Within walking distance you will find cafés, light meals, Japanese and Western restaurants and noodle shops — comfortable for solo visitors and families alike.",
+          "Some nearby establishments serve Nagoya specialities such as miso katsu, hitsumabushi, tebasaki and miso nikomi udon.",
+          "Bringing your own bento for a picnic works well too. Please take your rubbish home."
+        ]
+      },
+      {
+        "icon": "🏨",
+        "title": "Lodging",
+        "summary": "The Sakae and Fushimi area is a lodging hub for sightseeing.",
+        "items": [
+          "Business hotels, city hotels and capsule hotels at a range of price points cluster within walking distance.",
+          "Most are close to subway stations, making the area a convenient base for the park and the city.",
+          "Book early for peak periods such as cherry blossom season, long holidays and major events."
+        ]
+      },
+      {
+        "icon": "🛒",
+        "title": "Shopping & convenience stores",
+        "summary": "Convenience stores, pharmacies and large commercial complexes are within walking distance.",
+        "items": [
+          "Convenience stores and drugstores nearby cover drinks, snacks and daily necessities.",
+          "Underground shopping streets and large commercial buildings are close by — useful in the rain or when filling time.",
+          "Supermarkets tend to sit around the stations or in the underground arcades, a short walk away."
+        ]
+      },
+      {
+        "icon": "⛽",
+        "title": "Fuel & EV charging",
+        "summary": "If you drive, check nearby petrol stations and charging points in advance.",
+        "items": [
+          "Petrol stations are dotted along the main roads around the district.",
+          "EV charging points may be available in nearby car parks or commercial facilities.",
+          "Output, connector type and billing differ between operators, so checking an app beforehand is advisable."
+        ]
+      },
+      {
+        "icon": "♿",
+        "title": "Accessibility & families",
+        "summary": "The paths are largely flat and comfortable with a stroller.",
+        "items": [
+          "Paths are flat with few steps, so wheelchairs and strollers can circulate easily.",
+          "Some locations have multi-purpose restrooms, making it easier for visitors with assistance needs.",
+          "The open plaza has room to run around, which suits families with children.",
+          "Adjacent cultural venues provide lifts and nursing rooms."
+        ]
+      },
+      {
+        "icon": "📶",
+        "title": "Other practicalities",
+        "summary": "Connectivity, cash machines and lockers are available nearby.",
+        "items": [
+          "Public Wi-Fi may be available in nearby commercial and cultural facilities.",
+          "ATMs can be found in nearby convenience stores and financial institutions.",
+          "Coin lockers are located in the adjacent cultural venues and station buildings.",
+          "Bins in the park are limited — taking rubbish home is the norm."
+        ]
+      }
+    ]
+  },
+  "history": {
+    "title": "History & Significance of Shirakawa Park",
+    "subtitle": "From a burnt-out district to the \"Forest of Art and Science\" — how this park grew in the heart of Nagoya.",
+    "paragraphs": [
+      "Shirakawa Park is an urban park of roughly 8.9 hectares in Sakae 2-chome, Naka Ward, Nagoya. It holds two cultural institutions on its grounds — the Nagoya City Science Museum and the Nagoya City Art Museum — and in 2013 was given the nickname \"Forest of Art and Science\".",
+      "Its story is essentially a chapter of modern Nagoya. In 1942, as part of the celebrations for the 2,600th anniversary of the legendary founding of Japan, a park was planned for this district and, as the war deepened, designated an \"air-defence park\". On 12 March 1945 the Nagoya air raid reduced the Shirakawa district to ashes.",
+      "After the war the land was requisitioned and became \"Castle Heights\", a housing area for occupation forces' families. Returned in 1958, it was redeveloped by the city as a park and opened in 1967 to a design by the landscape architect Kimio Kondo."
+    ],
+    "timelineTitle": "Milestones",
+    "timeline": [
+      { "year": "1942", "title": "Park plan begins", "text": "Planned as part of the 2,600th anniversary project and designated an air-defence park in wartime." },
+      { "year": "1945", "title": "The Nagoya air raid", "text": "The raid of 12 March leaves the Shirakawa district burnt out." },
+      { "year": "1945–1958", "title": "Castle Heights", "text": "The land is requisitioned and becomes housing for occupation forces' families." },
+      { "year": "1958", "title": "Return and redevelopment", "text": "The site is returned and work begins to create an urban park." },
+      { "year": "1962", "title": "Science museum opens", "text": "The municipal Nagoya Science Museum, with astronomy and science buildings, opens." },
+      { "year": "1967", "title": "Shirakawa Park opens", "text": "The park opens as an urban park to a design by the landscape architect Kimio Kondo." },
+      { "year": "1988", "title": "Art museum opens", "text": "The Nagoya City Art Museum, designed by architect Kisho Kurokawa, opens on the south side." },
+      { "year": "1989", "title": "Life Science building added", "text": "The museum is renamed Nagoya City Science Museum and its life science building opens." },
+      { "year": "1991", "title": "Fountain unveiled", "text": "The fountain \"Niji no Mai Shirakawa\" is donated to mark a local broadcaster's 40th anniversary." },
+      { "year": "1995–2001", "title": "Sculpture Promenade", "text": "The Shirakawa Park Sculpture Promenade is developed, placing artworks throughout the grounds." },
+      { "year": "2011", "title": "World's largest planetarium", "text": "The science museum's new planetarium, 35 m in diameter, opens and is certified by Guinness World Records." },
+      { "year": "2013", "title": "A new nickname", "text": "The park is officially nicknamed the \"Forest of Art and Science\"." }
+    ],
+    "storiesTitle": "Origins and stories",
+    "stories": [
+      { "icon": "🏞️", "title": "Where the name \"Shirakawa\" comes from", "text": "The park takes its name from Shirakawa-cho, the old district name. A waterway is said to have once run through the area, and its name survives in the place name — the park thus keeps alive the memory of a stream that has vanished." },
+      { "icon": "🔥", "title": "Recovery that began in ashes", "text": "Immediately after the war, Shirakawa-cho was a burnt plain. That this land ended up preserved as a single large park site is the foundation of the greenery you see today." },
+      { "icon": "🏘️", "title": "From military housing to a civic square", "text": "During the occupation it was \"Castle Heights\", housing for American forces' families. Its conversion into lawns and tree-lined paths after the land was returned is a story emblematic of Nagoya's post-war recovery." },
+      { "icon": "🗿", "title": "An open-air gallery", "text": "The Sculpture Promenade, developed from 1995, scattered sculptures across the grounds. The park became an \"open exhibition room\" where art appears mid-walk, not only inside the museum." },
+      { "icon": "🌳", "title": "A green corridor born of city planning", "text": "Post-war reconstruction plans included 100-metre-wide boulevards, creating Wakamiya-odori and Hisaya-odori. Shirakawa Park sits beside this green axis and acts as a buffer within the built-up city." },
+      { "icon": "⛲", "title": "A fountain the city took to heart", "text": "The fountain named \"Niji no Mai Shirakawa\" was donated by a local broadcaster for its 40th anniversary. Its sound and coolness make it a resting point on summer walks." }
+    ],
+    "factsTitle": "A few things worth knowing",
+    "facts": [
+      "The park covers about 8.9 hectares (89,300 m²), a large urban park next to the commercial district around Nagoya Station.",
+      "Having both the Nagoya City Science Museum and the Nagoya City Art Museum within a single park is unusual even by national standards.",
+      "The science museum's planetarium, \"Brother Earth\", is 35 m in diameter and was certified by Guinness World Records as the world's largest when it opened.",
+      "The name \"Shirakawa\" comes from the former district name and still survives in nearby intersection and bus stop names.",
+      "In cherry blossom season the park fills with local workers and families, and its benches and shade make ideal resting spots."
     ]
   }
 }

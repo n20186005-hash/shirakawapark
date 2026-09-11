@@ -1,13 +1,14 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { attraction } from '../config/attraction';
 const { messages } = getI18n(Astro.url);
 const g = messages.gallery;
-const totalImages = 24;
-const images = Array.from({ length: totalImages }, (_, i) => {
-  const n = String(i + 1);
-  return `/gallery/shirakawapark-${n}.jpg`;
-});
-const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
+// 图片经 `npm run images:optimize` 压缩，并同时提供 JPG 与 WebP 两种格式
+const photos = Array.from({ length: attraction.galleryCount }, (_, i) => ({
+  jpg: `${attraction.galleryPrefix}${i + 1}.jpg`,
+  webp: `${attraction.galleryPrefix}${i + 1}.webp`,
+}));
+const photoAlts = g.photoAlts ?? photos.map(() => g.photoAlt);
 ---
 
 <section id="gallery" class="section-padding" style="background: var(--bg-secondary);">
@@ -16,9 +17,20 @@ const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
     <p class="text-center text-lg mb-10" style="color: var(--text-secondary);">{g.subtitle}</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="gallery-grid">
-      {images.map((src, index) => (
+      {photos.map((photo, index) => (
         <figure class="gallery-item rounded-2xl border overflow-hidden" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
-          <img src={src} alt={photoAlts[index] ?? g.photoAlt} loading="lazy" class="w-full h-56 object-cover" />
+          <picture>
+            <source srcset={photo.webp} type="image/webp" />
+            <img
+              src={photo.jpg}
+              alt={photoAlts[index] ?? g.photoAlt}
+              width="1200"
+              height="800"
+              loading={index < 3 ? 'eager' : 'lazy'}
+              decoding="async"
+              class="w-full h-56 object-cover"
+            />
+          </picture>
           <figcaption class="px-4 py-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
             {photoAlts[index] ?? g.photoAlt}
           </figcaption>

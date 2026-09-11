@@ -41,3 +41,9 @@ rename_*.js
 rename_*.mjs
 rename_*.ts
 *.txt
+
+# SEO：robots.txt 属于必要部署文件，必须纳入版本控制
+!public/robots.txt
+
+# 图片母版（约 80MB 原始照片），仅本地保留用于重新生成产物，不进仓库
+assets/originals/

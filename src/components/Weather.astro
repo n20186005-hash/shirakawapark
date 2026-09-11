@@ -1,0 +1,311 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config/attraction';
+import {
+  getWeather,
+  weatherGroup,
+  weatherIcon,
+  weatherApiUrl,
+  umbrellaLevel,
+  clothingLevel,
+  wmoGroups,
+  weatherIcons,
+} from '../lib/weather';
+
+const { lang, messages } = getI18n(Astro.url);
+const w = messages.weather;
+// 构建期（服务器端）取数；外网不可用时返回 null，页面降级显示占位内容
+const data = await getWeather();
+const endpoint = weatherApiUrl();
+
+const LOCALE_TAG: Record<string, string> = { ja: 'ja-JP', zh: 'zh-CN', en: 'en-US', ko: 'ko-KR' };
+const tag = LOCALE_TAG[lang] ?? 'ja-JP';
+const weekdayFmt = new Intl.DateTimeFormat(tag, { weekday: 'short' });
+const monthDayFmt = new Intl.DateTimeFormat(tag, { month: 'numeric', day: 'numeric' });
+
+// 统一用 UTC 正午构造日期，避免构建机时区造成星期/日期偏移
+const atNoon = (iso: string) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(Date.UTC(y, (m ?? 1) - 1, d ?? 1, 12));
+};
+const tokyoToday = () =>
+  new Intl.DateTimeFormat('en-CA', { timeZone: attraction.timezone }).format(new Date());
+const addDays = (iso: string, n: number) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d + n)).toISOString().slice(0, 10);
+};
+
+const PLACEHOLDER = { weatherCode: 0, tempMax: NaN, tempMin: NaN, precipitationProbability: NaN, uvIndexMax: NaN, sunrise: '', sunset: '' };
+const rawDays = data?.daily?.length
+  ? data.daily
+  : Array.from({ length: 7 }, (_, i) => ({ date: addDays(tokyoToday(), i), ...PLACEHOLDER }));
+
+const num = (value: number, digits = 0) =>
+  Number.isFinite(value) ? value.toFixed(digits) : '--';
+
+const days = rawDays.map((d, i) => {
+  const group = weatherGroup(d.weatherCode);
+  return {
+    index: i,
+    date: d.date,
+    icon: data ? weatherIcon(group, true) : '—',
+    desc: data ? (w.codes?.[group] ?? '') : '',
+    pop: num(d.precipitationProbability),
+    max: num(d.tempMax),
+    min: num(d.tempMin),
+    label: i === 0 ? w.today : i === 1 ? w.tomorrow : weekdayFmt.format(atNoon(d.date)),
+    shortDate: monthDayFmt.format(atNoon(d.date)),
+  };
+});
+
+const today = rawDays[0];
+const currentGroup = data ? weatherGroup(data.current.weatherCode) : null;
+const umbrella = umbrellaLevel(today?.precipitationProbability ?? 0);
+const clothing = clothingLevel(data?.current.apparentTemperature ?? 15);
+const uvIndex = today?.uvIndexMax ?? 0;
+const uvLevel = uvIndex >= 6 ? 'strong' : uvIndex >= 3 ? 'moderate' : 'low';
+const updatedLabel = data
+  ? new Intl.DateTimeFormat(tag, {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: attraction.timezone,
+    }).format(new Date(data.fetchedAt))
+  : '';
+const clock = (iso: string) => (iso?.includes('T') ? iso.slice(11, 16) : '--');
+
+// 映射表随页面下发，前端刷新脚本无需重复维护天气代码规则
+const safeJson = (value: unknown) =>
+  JSON.stringify(value).replace(/</g, '\\u003c').replace(/[\u2028\u2029]/g, '');
+const clientPayload = safeJson({ t: w, groups: wmoGroups, icons: weatherIcons, locale: tag });
+---
+
+<section
+  id="weather"
+  class="section-padding"
+  style="background: var(--bg-primary);"
+  data-weather
+  data-endpoint={endpoint}
+>
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{w.title}</h2>
+    <p class="text-center text-base sm:text-lg mb-8" style="color: var(--text-secondary);">{w.subtitle}</p>
+
+    <div class="grid gap-5 lg:grid-cols-5">
+      <!-- 当前实况 -->
+      <div class="lg:col-span-2 rounded-2xl border p-6 flex flex-col" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <p class="text-xs uppercase tracking-[0.18em] mb-4" style="color: var(--text-muted);">{w.currentLabel}</p>
+
+        <div class="flex items-center gap-4 mb-5">
+          <span class="text-5xl leading-none" data-w-icon aria-hidden="true">{currentGroup ? weatherIcon(currentGroup, data?.current.isDay ?? true) : '—'}</span>
+          <div>
+            <p class="font-display text-4xl font-semibold leading-none" style="color: var(--text-primary);">
+              <span data-w-temp>{data ? Math.round(data.current.temperature) : '--'}</span><span class="text-xl align-top">°C</span>
+            </p>
+            <p class="mt-1 text-sm" style="color: var(--text-secondary);" data-w-desc>{currentGroup ? (w.codes?.[currentGroup] ?? '') : '--'}</p>
+          </div>
+        </div>
+
+        <dl class="grid grid-cols-2 gap-3 text-sm">
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-secondary);">
+            <dt style="color: var(--text-muted);">{w.feelsLike}</dt>
+            <dd class="font-medium mt-0.5" style="color: var(--text-primary);"><span data-w-feels>{data ? Math.round(data.current.apparentTemperature) : '--'}</span> °C</dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-secondary);">
+            <dt style="color: var(--text-muted);">{w.humidity}</dt>
+            <dd class="font-medium mt-0.5" style="color: var(--text-primary);"><span data-w-humidity>{data ? Math.round(data.current.humidity) : '--'}</span> %</dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-secondary);">
+            <dt style="color: var(--text-muted);">{w.wind}</dt>
+            <dd class="font-medium mt-0.5" style="color: var(--text-primary);"><span data-w-wind>{data ? data.current.windSpeed.toFixed(1) : '--'}</span> m/s</dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-secondary);">
+            <dt style="color: var(--text-muted);">{w.precipitation}</dt>
+            <dd class="font-medium mt-0.5" style="color: var(--text-primary);"><span data-w-pop>{num(today?.precipitationProbability ?? NaN)}</span> %</dd>
+          </div>
+        </dl>
+
+        <div class="mt-5 pt-4 border-t flex items-center justify-between text-xs" style="border-color: var(--border-color); color: var(--text-muted);">
+          <span>🌅 {w.sunrise} <span data-w-sunrise>{clock(today?.sunrise ?? '')}</span></span>
+          <span>🌇 {w.sunset} <span data-w-sunset>{clock(today?.sunset ?? '')}</span></span>
+        </div>
+      </div>
+
+      <!-- 7 日预报 -->
+      <div class="lg:col-span-3 rounded-2xl border p-6" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <p class="text-xs uppercase tracking-[0.18em] mb-4" style="color: var(--text-muted);">{w.forecastTitle}</p>
+
+        <ul class="divide-y" style="border-color: var(--border-color);">
+          {days.map((day) => (
+            <li class="flex items-center gap-3 py-2.5 first:pt-0 last:pb-0" data-w-day={day.index}>
+              <span class="w-14 shrink-0 text-sm font-medium" style="color: var(--text-primary);" data-w-day-label>{day.label}</span>
+              <span class="text-2xl leading-none shrink-0" aria-hidden="true" data-w-day-icon>{day.icon}</span>
+              <span class="flex-1 min-w-0 text-xs sm:text-sm truncate" style="color: var(--text-secondary);" data-w-day-desc>{day.desc}</span>
+              <span class="shrink-0 text-xs tabular-nums" style="color: var(--text-muted);">💧<span data-w-day-pop>{day.pop}</span>%</span>
+              <span class="shrink-0 text-sm font-medium tabular-nums w-20 text-right" style="color: var(--text-primary);">
+                <span data-w-day-max>{day.max}</span>° / <span data-w-day-min>{day.min}</span>°
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- 出行建议 -->
+    <div class="mt-5 grid gap-4 sm:grid-cols-3">
+      <div class="rounded-2xl border p-5" style="background: var(--card-bg); border-color: var(--border-color);">
+        <p class="text-sm font-semibold mb-2" style="color: var(--text-primary);">☂️ {w.umbrellaTitle}</p>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);" data-w-umbrella>{w.advice?.umbrella?.[umbrella]}</p>
+      </div>
+      <div class="rounded-2xl border p-5" style="background: var(--card-bg); border-color: var(--border-color);">
+        <p class="text-sm font-semibold mb-2" style="color: var(--text-primary);">🧥 {w.clothingTitle}</p>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);" data-w-clothing>{w.advice?.clothing?.[clothing]}</p>
+      </div>
+      <div class="rounded-2xl border p-5" style="background: var(--card-bg); border-color: var(--border-color);">
+        <p class="text-sm font-semibold mb-2" style="color: var(--text-primary);">🧴 {w.uvTitle}</p>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);" data-w-uv>{w.advice?.uv?.[uvLevel]}</p>
+      </div>
+    </div>
+
+    <p class="mt-4 text-xs text-center" style="color: var(--text-muted);">
+      {w.updated}: <span data-w-updated>{updatedLabel}</span> · {w.note}
+    </p>
+  </div>
+
+  <script type="application/json" id="weather-i18n" set:html={clientPayload}></script>
+</section>
+
+<script is:inline>
+  (function () {
+    var root = document.querySelector('[data-weather]');
+    var payloadEl = document.getElementById('weather-i18n');
+    if (!root || !payloadEl) return;
+
+    var payload;
+    try {
+      payload = JSON.parse(payloadEl.textContent || '{}');
+    } catch (e) {
+      return;
+    }
+    var T = payload.t || {};
+    var groups = payload.groups || {};
+    var icons = payload.icons || {};
+    var locale = payload.locale || 'ja-JP';
+    var endpoint = root.getAttribute('data-endpoint');
+    if (!endpoint) return;
+
+    // 同一会话内最多每 15 分钟刷新一次，避免无谓请求
+    var KEY = 'sp-weather-refreshed-at';
+    var TTL = 15 * 60 * 1000;
+    try {
+      var last = Number(sessionStorage.getItem(KEY) || 0);
+      if (last && Date.now() - last < TTL) return;
+    } catch (e) {
+      /* 隐私模式下 sessionStorage 不可用，继续照常刷新 */
+    }
+
+    var pick = function (scope, key) {
+      var el = scope.querySelector('[' + key + ']');
+      return el;
+    };
+    var setText = function (scope, key, value) {
+      var el = pick(scope, key);
+      if (el && value !== undefined && value !== null && value !== '') el.textContent = value;
+    };
+
+    var numText = function (value, digits) {
+      return typeof value === 'number' && isFinite(value) ? value.toFixed(digits || 0) : '--';
+    };
+    var groupOf = function (code) {
+      return groups[code] || 'partlyCloudy';
+    };
+    var iconOf = function (group, isDay) {
+      var entry = icons[group] || icons.partlyCloudy;
+      return isDay === false ? entry.night : entry.day;
+    };
+    var atNoon = function (iso) {
+      var p = iso.split('-');
+      return new Date(Date.UTC(Number(p[0]), Number(p[1]) - 1, Number(p[2]), 12));
+    };
+    var clockOf = function (iso) {
+      return typeof iso === 'string' && iso.indexOf('T') > -1 ? iso.slice(11, 16) : '--';
+    };
+    var umbrellaLevel = function (pop) {
+      if (pop >= 60) return 'high';
+      if (pop >= 30) return 'medium';
+      return 'low';
+    };
+    var clothingLevel = function (feels) {
+      if (feels >= 30) return 'hot';
+      if (feels >= 24) return 'warm';
+      if (feels >= 15) return 'mild';
+      if (feels >= 8) return 'cool';
+      return 'cold';
+    };
+
+    var weekdayFmt = new Intl.DateTimeFormat(locale, { weekday: 'short' });
+    var timeFmt = new Intl.DateTimeFormat(locale, {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'Asia/Tokyo',
+    });
+
+    fetch(endpoint)
+      .then(function (res) {
+        return res.ok ? res.json() : Promise.reject(new Error('bad response'));
+      })
+      .then(function (json) {
+        var current = json && json.current;
+        var daily = json && json.daily;
+        if (!current || !daily || !daily.time || !daily.time.length) return;
+
+        var isDay = Number(current.is_day) === 1;
+        var group = groupOf(current.weather_code);
+        setText(root, 'data-w-icon', iconOf(group, isDay));
+        setText(root, 'data-w-temp', numText(current.temperature_2m));
+        setText(root, 'data-w-desc', (T.codes || {})[group] || '');
+        setText(root, 'data-w-feels', numText(current.apparent_temperature));
+        setText(root, 'data-w-humidity', numText(current.relative_humidity_2m));
+        setText(root, 'data-w-wind', numText(current.wind_speed_10m, 1));
+        setText(root, 'data-w-sunrise', clockOf(daily.sunrise && daily.sunrise[0]));
+        setText(root, 'data-w-sunset', clockOf(daily.sunset && daily.sunset[0]));
+        setText(root, 'data-w-updated', timeFmt.format(new Date()));
+
+        var todayPop = Number(daily.precipitation_probability_max && daily.precipitation_probability_max[0]);
+        var feels = Number(current.apparent_temperature);
+        setText(root, 'data-w-pop', isFinite(todayPop) ? todayPop.toFixed(0) : '--');
+
+        var advice = T.advice || {};
+        if (advice.umbrella) setText(root, 'data-w-umbrella', advice.umbrella[umbrellaLevel(todayPop)]);
+        if (advice.clothing) setText(root, 'data-w-clothing', advice.clothing[clothingLevel(feels)]);
+        var uvToday = Number(daily.uv_index_max && daily.uv_index_max[0]);
+        if (advice.uv && isFinite(uvToday)) {
+          setText(root, 'data-w-uv', advice.uv[uvToday >= 6 ? 'strong' : uvToday >= 3 ? 'moderate' : 'low']);
+        }
+
+        var rows = root.querySelectorAll('[data-w-day]');
+        for (var i = 0; i < rows.length && i < daily.time.length; i++) {
+          var row = rows[i];
+          var dayGroup = groupOf(daily.weather_code && daily.weather_code[i]);
+          setText(row, 'data-w-day-icon', iconOf(dayGroup, true));
+          setText(row, 'data-w-day-desc', (T.codes || {})[dayGroup] || '');
+          setText(row, 'data-w-day-pop', numText(daily.precipitation_probability_max && daily.precipitation_probability_max[i]));
+          setText(row, 'data-w-day-max', numText(daily.temperature_2m_max && daily.temperature_2m_max[i]));
+          setText(row, 'data-w-day-min', numText(daily.temperature_2m_min && daily.temperature_2m_min[i]));
+          setText(
+            row,
+            'data-w-day-label',
+            i === 0 ? T.today : i === 1 ? T.tomorrow : weekdayFmt.format(atNoon(daily.time[i]))
+          );
+        }
+
+        try {
+          sessionStorage.setItem(KEY, String(Date.now()));
+        } catch (e) {
+          /* 忽略存储失败 */
+        }
+      })
+      .catch(function () {
+        /* 静默失败：保留构建期渲染的数据 */
+      });
+  })();
+</script>

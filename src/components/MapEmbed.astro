@@ -1,8 +1,9 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { attraction } from '../config/attraction';
 const { messages } = getI18n(Astro.url);
 const m = messages.mapSection;
-const embedUrl = 'https://www.google.com/maps?q=Shirakawa+Park+Nagoya&output=embed';
+const embedUrl = attraction.mapsEmbedSrc;
 ---
 
 <section id="map" class="section-padding" style="background: var(--bg-secondary);">
@@ -17,15 +18,19 @@ const embedUrl = 'https://www.google.com/maps?q=Shirakawa+Park+Nagoya&output=emb
         width="100%"
         height="420"
         style="border:0;"
+        title={`${attraction.fullName} (${attraction.city}) — Google Maps`}
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title={m.title}
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
       ></iframe>
     </div>
 
-    <div class="text-center mt-8">
+    <div class="text-center mt-8 flex flex-col sm:flex-row gap-3 justify-center">
       <a href={m.mapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white" style="background: var(--accent);">
         📍 {m.openMaps}
+      </a>
+      <a href={attraction.govTourismUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold border" style="border-color: var(--border-color); color: var(--text-primary);">
+        {m.officialTourism}
       </a>
     </div>
   </div>
