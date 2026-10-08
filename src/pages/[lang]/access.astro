@@ -1,0 +1,10 @@
+---
+import Subpage from '../../components/Subpage.astro';
+import { languagesList } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return languagesList.map((lang) => ({ params: { lang } }));
+}
+---
+
+<Subpage sectionKey="access" path="access" />

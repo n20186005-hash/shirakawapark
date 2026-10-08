@@ -102,4 +102,62 @@
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
+  <url>
+    <loc>https://shirakawapark.com/ja/parking</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://shirakawapark.com/ja/parking"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shirakawapark.com/en/parking"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://shirakawapark.com/zh/parking"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://shirakawapark.com/ko/parking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shirakawapark.com/en/parking"/>
+  </url>
+  <url>
+    <loc>https://shirakawapark.com/en/parking</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shirakawapark.com/zh/parking</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shirakawapark.com/ko/parking</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shirakawapark.com/ja/access</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://shirakawapark.com/ja/access"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shirakawapark.com/en/access"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://shirakawapark.com/zh/access"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://shirakawapark.com/ko/access"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shirakawapark.com/en/access"/>
+  </url>
+  <url>
+    <loc>https://shirakawapark.com/en/access</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shirakawapark.com/zh/access</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shirakawapark.com/ko/access</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

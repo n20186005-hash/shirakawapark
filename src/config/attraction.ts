@@ -65,7 +65,7 @@ export const attraction = {
 
   // ── 评分（与 Google 地图资料一致）──────────────────────────
   ratingValue: 4.0,
-  reviewCount: 7032,
+  reviewCount: 7103,
   priceRange: 'Free',
 };
 

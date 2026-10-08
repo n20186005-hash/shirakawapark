@@ -10,9 +10,10 @@ interface Props {
   title: string;
   description: string;
   path?: string;
+  faqItems?: { q: string; a: string }[];
 }
 
-const { title, description, path = '' } = Astro.props;
+const { title, description, path = '', faqItems } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
@@ -72,8 +73,10 @@ const jsonLd = {
 };
 
 // ── 2. FAQ 结构化数据：抢占 Featured Snippet / AI 概览卡片 ──────────────
-const faqEntities = (messages.faq?.categories ?? [])
-  .flatMap((cat: any) => cat.items ?? [])
+const faqSourceItems = faqItems && faqItems.length
+  ? faqItems
+  : (messages.faq?.categories ?? []).flatMap((cat: any) => cat.items ?? []);
+const faqEntities = faqSourceItems
   .filter((item: any) => item?.q && item?.a)
   .map((item: any) => ({
     '@type': 'Question',

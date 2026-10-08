@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getI18n } from '../i18n/ui';
+
+interface Props {
+  sectionKey: 'parking' | 'access';
+  path: string;
+}
+const { sectionKey, path } = Astro.props;
+const { messages, lang } = getI18n(Astro.url);
+const s = (messages as any)[sectionKey];
+const homeHref = `/${lang}`;
+const backLabel = messages.header.backToHome ?? '←';
+---
+
+<BaseLayout title={s.title} description={s.description} path={path} faqItems={s.faq?.items ?? []}>
+  <section class="section-padding" style="background: var(--bg-secondary);">
+    <div class="max-w-3xl mx-auto px-4">
+      <a href={homeHref} class="text-sm font-medium hover:opacity-70" style="color: var(--accent);">{backLabel}</a>
+      <h1 class="font-display text-3xl sm:text-4xl font-semibold mt-4 mb-3" style="color: var(--text-primary);">{s.h1}</h1>
+      <p class="text-base sm:text-lg leading-relaxed mb-10" style="color: var(--text-secondary);">{s.intro}</p>
+
+      {
+        s.mainLot && (
+          <div class="rounded-2xl p-6 md:p-8 border mb-8" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+            <h2 class="font-semibold text-xl mb-3" style="color: var(--text-primary);">{s.mainLot.title}</h2>
+            <ul class="space-y-2 text-sm" style="color: var(--text-secondary);">
+              {s.mainLot.items.map((item: string) => (
+                <li class="flex gap-3">
+                  <span style="color: var(--accent);">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            {s.mainLot.note && (
+              <p class="mt-4 text-sm rounded-xl px-4 py-3" style="background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--text-primary);">
+                {s.mainLot.note}
+              </p>
+            )}
+          </div>
+        )
+      }
+
+      {
+        [s.subway, s.nearby, s.exit, s.bus, s.car, s.accessibility].filter(Boolean).map((block: any) => (
+          <div class="rounded-2xl p-6 md:p-8 border mb-8" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+            <h2 class="font-semibold text-xl mb-3" style="color: var(--text-primary);">{block.title}</h2>
+            <ul class="space-y-3 text-sm" style="color: var(--text-secondary);">
+              {block.items.map((item: string) => (
+                <li class="flex gap-3">
+                  <span style="color: var(--accent);">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+
+      {
+        s.tips && (
+          <div class="rounded-2xl p-6 md:p-8 border mb-8" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+            <h2 class="font-semibold text-xl mb-3" style="color: var(--text-primary);">{s.tips.title}</h2>
+            <ul class="space-y-3 text-sm" style="color: var(--text-secondary);">
+              {s.tips.items.map((item: string) => (
+                <li class="flex gap-3">
+                  <span style="color: var(--accent);">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      {
+        s.faq && (
+          <div class="rounded-2xl p-6 md:p-8 border mb-8" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+            <h2 class="font-semibold text-xl mb-4" style="color: var(--text-primary);">{s.faq.title}</h2>
+            <div class="space-y-4">
+              {s.faq.items.map((item: any) => (
+                <div class="rounded-xl border p-4" style="border-color: var(--border-color);">
+                  <p class="font-semibold mb-2" style="color: var(--text-primary);">Q. {item.q}</p>
+                  <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
+
+      {
+        s.related && (
+          <div class="mt-10">
+            <h2 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">{s.relatedTitle}</h2>
+            <div class="flex flex-wrap gap-3">
+              {s.related.map((r: any) => (
+                <a href={r.href} class="inline-flex px-5 py-2.5 rounded-full border text-sm font-medium hover:opacity-80" style="border-color: var(--border-color); color: var(--accent);">
+                  {r.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>

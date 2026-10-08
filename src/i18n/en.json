@@ -15,6 +15,8 @@
     "reviews": "Reviews",
     "faq": "FAQ",
     "map": "Map",
+    "parking": "Parking",
+    "access": "Directions",
     "backToHome": "Back to Home"
   },
   "common": {
@@ -24,8 +26,8 @@
   "hero": {
     "title": "Shirakawa Park",
     "subtitle": "Where art, science and greenery intertwine — a cultural gravity point in central Nagoya. A 'green lung' reborn after the war, crowned to the north by the world's largest planetarium dome and embraced to the south by a temple of art. Cherry blossoms in spring, golden ginkgo in autumn, open 24 hours — a hidden natural sanctuary beside the bustling Sakae district.",
-    "rating": "4.0 (7,032)",
-    "reviewCount": "7,032 reviews",
+    "rating": "4.0 (7,103)",
+    "reviewCount": "7,103 reviews (Google Maps)",
     "hours": "Open 24 hours",
     "fullNameLine": "Shirakawa Park (白川公園) — a free, 24-hour park in Sakae, Nagoya",
     "heroImage": "/gallery/shirakawa-park-hero.jpg",
@@ -44,7 +46,7 @@
   },
   "intro": {
     "title": "Discover Shirakawa Park",
-    "description": "Shirakawa Park is one of central Nagoya's most beloved green spaces, lying in the Sakae district of Naka Ward between the Nagoya City Science Museum and the Nagoya City Art Museum. Opened in 1931, it is a classic urban park of lawns, tree-lined paths and seasonal flower beds. Every spring roughly 120 cherry trees turn the grounds pink, while in autumn the ginkgo and maple leaves colour the avenues. With no admission fee and 24-hour access, it is a calm retreat for locals, families and visitors exploring the museums that flank it.",
+    "description": "Shirakawa Park is one of central Nagoya's most beloved green spaces, lying in the Sakae district of Naka Ward between the Nagoya City Science Museum and the Nagoya City Art Museum. Opened in 1967, it is a classic urban park of lawns, tree-lined paths and seasonal flower beds. Every spring roughly 120 cherry trees turn the grounds pink, while in autumn the ginkgo and maple leaves colour the avenues. With no admission fee and 24-hour access, it is a calm retreat for locals, families and visitors exploring the museums that flank it.",
     "visitGuide": {
       "title": "Visitor Guide",
       "eyebrow": "Practical Planning",
@@ -59,7 +61,7 @@
     "alsoKnownAs": {
       "title": "Highlights",
       "items": [
-        "Opened in 1931 as a classic Showa-era urban park",
+        "Opened in 1967 as a classic Showa-era urban park",
         "Home to the Nagoya City Science Museum and Art Museum",
         "Around 120 cherry trees — a famous Sakae hanami spot",
         "Open 24 hours, free admission, in central Nagoya"
@@ -74,7 +76,7 @@
     "arrivalTitle": "Know this before you set out",
     "arrivalItems": [
       "The park is in central Nagoya, Naka Ward, 2-17 Sakae — flat and easy to reach on foot from Sakae or Fushimi.",
-      "The park has no dedicated parking; use the municipal underground car parks nearby.",
+      "Near the park there is a paid car park, Times Shirakawa Park, and many hourly pay lots within walking distance in the Sakae and Fushimi areas.",
       "Cherry season and weekends get crowded; go early in the morning to beat the crowds."
     ],
     "modes": [
@@ -104,7 +106,7 @@
         "title": "Navigate to 'Shirakawa Park'",
         "description": "Handy with luggage or in bad weather.",
         "details": [
-          "Set your navigation to 'Shirakawa Park' and use the municipal underground car parks nearby (no on-site parking).",
+          "Set your navigation to 'Shirakawa Park' and use the nearby paid car park, Times Shirakawa Park (24-hour access), or hourly pay lots in the Sakae and Fushimi areas.",
           "About a 10-minute drive from Nagoya Station."
         ]
       }
@@ -119,12 +121,13 @@
     "mapsUrl": "https://maps.app.goo.gl/7B4tpRmrTBHFkHQf8",
     "parking": {
       "title": "Parking Guide",
-      "summary": "There is no visitor car park inside the park; use the time-based car parks nearby.",
+      "summary": "Near the park there is a paid car park, Times Shirakawa Park; when it is full or for longer stays, use the time-based car parks around Sakae and Fushimi.",
       "items": [
+        "Times Shirakawa Park, a paid car park near the park: 58 spaces, 24-hour entry/exit. Rates are about ¥300 per 15 minutes, with a daily maximum of around ¥1,500 on weekdays and ¥2,800 on weekends and holidays (these vary — please check the on-site price board).",
+        "The Nagoya City Science Museum has dedicated parking for wheelchair users and others with access needs; see the museum's official page for details.",
         "Several private time-based car parks are distributed around the park (toward Sakae and Fushimi), typically billed per 30 minutes and often with a daily maximum (cap) rate.",
         "Rates and caps vary by lot and time of day — please check the on-site price board before entering.",
         "Weekday daytime is usually easier; weekend, public-holiday and cherry-season mornings fill up quickly.",
-        "When full, consider lots a little further away or those attached to commercial buildings and underground arcades.",
         "Bicycles and motorbikes should use nearby bicycle/motorbike parking; riding into the park is not allowed."
       ],
       "stationNote": "Nearest station: about a 5-minute walk from Exit 5 of Fushimi Station (Higashiyama & Tsurumai subway lines)."
@@ -139,8 +142,8 @@
     "sections": [
       {
         "id": "history",
-        "title": "Origins (1931)",
-        "content": "Shirakawa Park opened in 1931 (Showa 6), during a period when Nagoya was modernising its urban centre. It was laid out as a Western-style public park of open lawns and tree-lined promenades, reflecting the city's ambition to create green, recreational spaces for its citizens. The park takes its name from the Shirakawa (White River), a small stream that once flowed through this part of Nagoya before being culverted underground as the city expanded."
+        "title": "Origins (1967)",
+        "content": "Shirakawa Park opened in 1967 (Showa 42), as the former postwar US military housing area 'Castle Heights' was redeveloped into a public urban park. It was laid out as a Western-style public park of open lawns and tree-lined promenades, reflecting the city's ambition to create green, recreational spaces for its citizens. The park takes its name from the Shirakawa (White River), a small stream that once flowed through this part of Nagoya before being culverted underground as the city expanded."
       },
       {
         "id": "meaning",
@@ -375,7 +378,7 @@
         "items": [
           {
             "q": "Is there parking nearby? How much does it cost?",
-            "a": "Shirakawa Park itself has no dedicated parking lot. Several paid municipal and private parking lots are within a 3–5 minute walk, mainly around the Sakae and Fushimi districts. Rates are typically charged by the hour; early arrival on weekends and during cherry season is recommended as they fill quickly."
+            "a": "Near Shirakawa Park there is a paid car park, Times Shirakawa Park (58 spaces, 24-hour entry/exit). Rates are about ¥300 per 15 minutes, with a daily maximum of around ¥1,500 on weekdays and ¥2,800 on weekends and holidays (these vary — please check the on-site price board). Many hourly pay lots are also found around Sakae and Fushimi; public transport is recommended when full or during peak times."
           },
           {
             "q": "How do I get to Shirakawa Park from Nagoya Station?",
@@ -397,7 +400,7 @@
         "items": [
           {
             "q": "When was the park founded and why is it special?",
-            "a": "Shirakawa Park opened in 1931 as a Western-style public park, named after the Shirakawa river that once flowed nearby. It is special because it cradles two major museums — the Nagoya City Science Museum and the Nagoya City Art Museum — and is famous for about 120 cherry trees that turn the grounds pink each spring."
+            "a": "Shirakawa Park opened in 1967 as a Western-style public park, named after the Shirakawa river that once flowed nearby. It is special because it cradles two major museums — the Nagoya City Science Museum and the Nagoya City Art Museum — and is famous for about 120 cherry trees that turn the grounds pink each spring."
           },
           {
             "q": "What is the Shirakawa river connection?",
@@ -708,9 +711,10 @@
       {
         "icon": "🅿️",
         "title": "Parking & bicycle storage",
-        "summary": "The park has no dedicated visitor car park; nearby hourly lots are the usual choice.",
+        "summary": "Near the park there is a paid car park, Times Shirakawa Park, and many hourly pay lots around Sakae and Fushimi; public transport is recommended at peak times.",
         "items": [
-          "There is no dedicated parking area for general visitors inside the park.",
+          "Times Shirakawa Park, a paid car park near the park: 58 spaces, 24-hour entry/exit (about ¥300 per 15 minutes, daily max around ¥1,500 weekdays / ¥2,800 weekends and holidays).",
+          "The Nagoya City Science Museum has dedicated parking for wheelchair users and others with access needs; see the museum's official page for details.",
           "Several privately operated hourly car parks are located nearby, some open 24 hours.",
           "Lots fill up quickly at weekends, on public holidays and during events — public transport is the safer bet.",
           "Bicycles and motorcycles should use nearby parking areas; riding inside the park is not permitted."
@@ -820,6 +824,120 @@
       "The science museum's planetarium, \"Brother Earth\", is 35 m in diameter and was certified by Guinness World Records as the world's largest when it opened.",
       "The name \"Shirakawa\" comes from the former district name and still survives in nearby intersection and bus stop names.",
       "In cherry blossom season the park fills with local workers and families, and its benches and shade make ideal resting spots."
+    ]
+  },
+  "parking": {
+    "title": "Shirakawa Park Parking Guide",
+    "h1": "Shirakawa Park Parking | Rates, Hours & Nearby Cheaper Lots",
+    "description": "Visiting Shirakawa Park by car? Find the rates and hours of the paid car park Times Shirakawa Park near the park, cheaper hourly lots around Sakae and Fushimi, and accessibility information.",
+    "intro": "Shirakawa Park is a Nagoya City urban park, but right next to it there is a paid car park, Times Shirakawa Park. Many hourly pay lots are also found around the Sakae and Fushimi areas. This page explains typical rates, opening hours and when it is likely to be full.",
+    "mainLot": {
+      "title": "The car park near the park: Times Shirakawa Park",
+      "items": [
+        "Capacity: 58 spaces",
+        "Hours: 24-hour entry/exit",
+        "Rates: ¥300 per 15 minutes",
+        "Daily maximum: about ¥1,500 on weekdays / ¥2,800 on weekends and holidays (as a guide)",
+        "Location: north side of the park (2-chome, Sakae, Naka Ward, Nagoya)",
+        "Payment: cash and major electronic payments (see the on-site sign for details)"
+      ],
+      "note": "Spaces and rates vary — please check the official 'Times Parking (Times no B)' page for the latest information."
+    },
+    "nearby": {
+      "title": "Cheaper & hourly lots nearby",
+      "items": [
+        "Several private hourly car parks are distributed around Sakae and Fushimi, typically billed per 30 minutes and often with a daily maximum (cap).",
+        "Weekday daytime is usually easier; weekend, public-holiday and cherry-season mornings fill up quickly.",
+        "When full, consider lots a little further away or those attached to commercial buildings and underground arcades."
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility & wheelchair use",
+      "items": [
+        "The Nagoya City Science Museum has dedicated parking for wheelchair users and others with access needs; see the museum's official page for details.",
+        "The park's paths are completely flat and paved, easy to use with wheelchairs and strollers."
+      ]
+    },
+    "tips": {
+      "title": "Tips for parking affordably",
+      "items": [
+        "Visit early in the morning on weekends or during cherry season (late March–early April).",
+        "Using public transport (Fushimi Station, Higashiyama & Tsurumai lines, 5 min walk) saves the trouble of finding a space.",
+        "If combining with nearby commercial facilities, check for shopping discounts and other services."
+      ]
+    },
+    "faq": {
+      "title": "Parking FAQ",
+      "items": [
+        { "q": "Is there parking at Shirakawa Park?", "a": "Yes. Near the park there is a paid car park, Times Shirakawa Park (58 spaces, 24-hour entry/exit). Many hourly pay lots are also found around Sakae and Fushimi." },
+        { "q": "How much does it cost?", "a": "Times Shirakawa Park is about ¥300 per 15 minutes, with a daily maximum of around ¥1,500 on weekdays and ¥2,800 on weekends and holidays (these vary — please check the on-site sign)." },
+        { "q": "Can I park 24 hours?", "a": "Times Shirakawa Park allows 24-hour entry/exit. Some nearby private lots are also open 24 hours." },
+        { "q": "Can I come with a wheelchair or stroller?", "a": "The museum has dedicated parking and the park paths are flat and barrier-free. See the museum's official page for details." }
+      ]
+    },
+    "relatedTitle": "Related",
+    "related": [
+      { "label": "Access to Shirakawa Park", "href": "/en/access" },
+      { "label": "Back to Shirakawa Park top", "href": "/en" }
+    ]
+  },
+  "access": {
+    "title": "Getting to Shirakawa Park",
+    "h1": "Access to Shirakawa Park | From Fushimi Station, by Bus & on Foot",
+    "description": "How to get to Shirakawa Park: the walking route from Fushimi Station (Higashiyama & Tsurumai subway lines), access from Sakae Station, by bus or car, and the best entrances.",
+    "intro": "Shirakawa Park is a Nagoya City urban park in the heart of Sakae, Naka Ward. The nearest subway station, Fushimi, is about a 5-minute walk away, and Sakae Station is about a 10-minute walk — very convenient. This page explains the specific walking route from the stations and how to visit by bus or car.",
+    "subway": {
+      "title": "By train / subway",
+      "items": [
+        "Take the Higashiyama or Tsurumai line to Fushimi, exit from Gate 5 and head south — about a 5-minute walk to the park.",
+        "Take the Higashiyama or Meijo line to Sakae, then stroll southwest for about a 10-minute walk.",
+        "From Nagoya Station, take the Higashiyama line to Fushimi (about 3 minutes, one stop)."
+      ]
+    },
+    "exit": {
+      "title": "Recommended exit & walking route from Fushimi",
+      "items": [
+        "Leave Fushimi Station via Exit 5 and go straight south.",
+        "The park's greenery comes into view past Hirokoji-dori.",
+        "Cross at the signal and enter from the north gate (science museum side) or the south gate (art museum side)."
+      ]
+    },
+    "bus": {
+      "title": "By bus",
+      "items": [
+        "City buses stop near 'Shirakawa Park' and 'Sakae'; please check the Nagoya City Transportation Bureau's official page for routes.",
+        "From the Sakae bus terminal it is a few minutes' walk to the park."
+      ]
+    },
+    "car": {
+      "title": "By car",
+      "items": [
+        "Set your navigation to 'Shirakawa Park' and it will guide you to the paid car park, Times Shirakawa Park, on the north side of the park.",
+        "From Nagoya Station it is usually about 10 minutes, but traffic may take longer.",
+        "For parking details, see the 'Shirakawa Park Parking' page."
+      ]
+    },
+    "tips": {
+      "title": "Tips for a smooth arrival",
+      "items": [
+        "Cherry season and weekends get crowded; use public transport or visit early in the morning.",
+        "The park has the science museum on the north and the art museum on the south — choose the gate nearest your destination.",
+        "On rainy days you can move without getting wet via the underground arcades and commercial facilities."
+      ]
+    },
+    "faq": {
+      "title": "Access FAQ",
+      "items": [
+        { "q": "What is the nearest station?", "a": "Fushimi Station (Higashiyama & Tsurumai lines) is nearest, about a 5-minute walk from Exit 5. Sakae Station is also about a 10-minute walk." },
+        { "q": "How do I get from Nagoya Station?", "a": "Take the Higashiyama line to Fushimi (about 3 minutes, one stop), then about a 5-minute walk from Exit 5. A taxi takes about 10 minutes." },
+        { "q": "Is it barrier-free?", "a": "The park paths are completely flat and paved, easy with wheelchairs and strollers. The museum also has dedicated parking." },
+        { "q": "Is there parking?", "a": "Near the park there is a paid car park, Times Shirakawa Park. See the 'Shirakawa Park Parking' page for details." }
+      ]
+    },
+    "relatedTitle": "Related",
+    "related": [
+      { "label": "Shirakawa Park Parking", "href": "/en/parking" },
+      { "label": "Back to Shirakawa Park top", "href": "/en" }
     ]
   }
 }
